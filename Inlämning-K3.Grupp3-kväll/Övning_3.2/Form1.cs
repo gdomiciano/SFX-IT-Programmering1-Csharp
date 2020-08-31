@@ -19,7 +19,9 @@ namespace Övning_3._2
 
         private void btnHittaTecken_Click(object sender, EventArgs e)
         {
+            string teckenkod = tbxTeckenkod.Text;
 
+            lblSvar.Text = "Tackenkoden " + teckenkod + " representera tecken " + (char) int.Parse(teckenkod);
         }
     }
 }

@@ -68,9 +68,11 @@
             // lblSvar
             // 
             this.lblSvar.AutoSize = true;
+            this.lblSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSvar.ForeColor = System.Drawing.Color.Navy;
             this.lblSvar.Location = new System.Drawing.Point(94, 124);
             this.lblSvar.Name = "lblSvar";
-            this.lblSvar.Size = new System.Drawing.Size(0, 13);
+            this.lblSvar.Size = new System.Drawing.Size(0, 17);
             this.lblSvar.TabIndex = 3;
             this.lblSvar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
