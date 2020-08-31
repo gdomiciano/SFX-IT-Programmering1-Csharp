@@ -21,7 +21,7 @@ namespace Övning_3._2
         {
             string teckenkod = tbxTeckenkod.Text;
 
-            lblSvar.Text = "Tackenkoden " + teckenkod + " representera tecken " + (char) int.Parse(teckenkod);
+            lblSvar.Text = "Tackenkoden " + teckenkod + " representera tecken " + (char) int.Parse(teckenkod) + '.';
         }
     }
 }
