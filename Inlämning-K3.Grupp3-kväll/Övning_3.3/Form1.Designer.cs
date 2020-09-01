@@ -39,7 +39,6 @@
             this.TextBoxInput.Name = "TextBoxInput";
             this.TextBoxInput.Size = new System.Drawing.Size(100, 20);
             this.TextBoxInput.TabIndex = 0;
-            this.TextBoxInput.TextChanged += new System.EventHandler(this.TextBoxInput_TextChanged);
             // 
             // ButtonToRoundNumbers
             // 
@@ -59,7 +58,6 @@
             this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hint: Use Numbers in the form of 10,5";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
