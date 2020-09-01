@@ -61,14 +61,6 @@ namespace Övning_3._3
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TextBoxInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
