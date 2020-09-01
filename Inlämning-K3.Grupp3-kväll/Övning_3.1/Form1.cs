@@ -12,59 +12,45 @@ namespace Övning_3._1
 
 
 
-        private void btnCalculate_Click(object sender, EventArgs e)
+        private void btnBeräknaArean_Click(object sender, EventArgs e)
         {
-            //TODO
-            //Assume the user has given us digits only.
-            //Assume that the number is less than the max number available to ints.
-
-            //this can and will fail if its not an INT
-
-            Double triangleBase = -1;
-            Double triangleHeight = -1;
-
-            string result = "";
-
             try
             {
-                triangleBase = Double.Parse(txtBoxBase.Text);
-                triangleHeight = Double.Parse(txtBoxHeight.Text);
+                double tBas = double.Parse(txbBas.Text);
+                double tHöjd = double.Parse(txbHöjd.Text);
 
-                result = CalculateTriangleArea(triangleBase, triangleHeight).ToString();
+                if (tBas > 0 && tHöjd > 0)
+                {
+                    string svar = "Triangeln arean är: ";
+                    string tArean = BeräknaArean(tBas, tHöjd).ToString();
+                    UppdateraSvar(svar, tArean);
+                } else
+                {
+                    UppdateraFel("Tal måste vara högre än 0");
+                }
             }
-            catch (Exception)
+            catch (FormatException fel)
             {
-
-
-            }
-
-
-
-            if (triangleBase > -1 && triangleHeight > -1)
-            {
-                UpdateResultText(result);
-            }
-            else
-            {
-                UpdateResultText("Something went wrong");
-                //TODO something went wrong.
+                UppdateraFel(fel.Message);
             }
         }
 
-
-        /// <summary>
-        /// Updates the result field with the outcome text passed.
-        /// </summary>
-        /// <param name="message"></param>
-        void UpdateResultText(string message)
+        void UppdateraSvar(string svar, string tArean)
         {
-            ResultLabel.Text = message;
-
+            lblFel.Text = "";
+            lblSvar.Text = svar + tArean;
         }
 
-        Double CalculateTriangleArea(Double tHeight, Double tBase)
+        void UppdateraFel(string felTexten)
         {
-            return (tHeight * tBase) / 2;
+            lblFel.Text = felTexten;
+            lblSvar.Text = "";
         }
+
+        Double BeräknaArean(Double tHöjd, Double tBas)
+        {
+            return (tHöjd * tBas) / 2;
+        }
+
     }
 }

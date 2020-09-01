@@ -28,76 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCalculate = new System.Windows.Forms.Button();
-            this.txtBoxHeight = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxBase = new System.Windows.Forms.TextBox();
-            this.ResultLabel = new System.Windows.Forms.Label();
+            this.btnBeräkna = new System.Windows.Forms.Button();
+            this.txbHöjd = new System.Windows.Forms.TextBox();
+            this.lblHöjd = new System.Windows.Forms.Label();
+            this.lblBas = new System.Windows.Forms.Label();
+            this.txbBas = new System.Windows.Forms.TextBox();
+            this.lblSvar = new System.Windows.Forms.Label();
+            this.lblTexten = new System.Windows.Forms.Label();
+            this.lblFel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnCalculate
+            // btnBeräkna
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(287, 253);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(242, 23);
-            this.btnCalculate.TabIndex = 0;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnBeräkna.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnBeräkna.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBeräkna.Location = new System.Drawing.Point(357, 90);
+            this.btnBeräkna.Name = "btnBeräkna";
+            this.btnBeräkna.Size = new System.Drawing.Size(150, 50);
+            this.btnBeräkna.TabIndex = 0;
+            this.btnBeräkna.Text = "Beräkna!";
+            this.btnBeräkna.UseVisualStyleBackColor = false;
+            this.btnBeräkna.Click += new System.EventHandler(this.btnBeräknaArean_Click);
             // 
-            // txtBoxHeight
+            // txbHöjd
             // 
-            this.txtBoxHeight.Location = new System.Drawing.Point(287, 159);
-            this.txtBoxHeight.Name = "txtBoxHeight";
-            this.txtBoxHeight.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxHeight.TabIndex = 1;
+            this.txbHöjd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbHöjd.Location = new System.Drawing.Point(102, 104);
+            this.txbHöjd.Name = "txbHöjd";
+            this.txbHöjd.Size = new System.Drawing.Size(100, 23);
+            this.txbHöjd.TabIndex = 1;
             // 
-            // label1
+            // lblHöjd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 182);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Height";
+            this.lblHöjd.AutoSize = true;
+            this.lblHöjd.BackColor = System.Drawing.SystemColors.Control;
+            this.lblHöjd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHöjd.Location = new System.Drawing.Point(99, 84);
+            this.lblHöjd.Name = "lblHöjd";
+            this.lblHöjd.Size = new System.Drawing.Size(41, 17);
+            this.lblHöjd.TabIndex = 3;
+            this.lblHöjd.Text = "Höjd:";
             // 
-            // label2
+            // lblBas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Base";
+            this.lblBas.AutoSize = true;
+            this.lblBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBas.Location = new System.Drawing.Point(230, 84);
+            this.lblBas.Name = "lblBas";
+            this.lblBas.Size = new System.Drawing.Size(32, 17);
+            this.lblBas.TabIndex = 5;
+            this.lblBas.Text = "Bas";
             // 
-            // txtBoxBase
+            // txbBas
             // 
-            this.txtBoxBase.Location = new System.Drawing.Point(429, 159);
-            this.txtBoxBase.Name = "txtBoxBase";
-            this.txtBoxBase.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxBase.TabIndex = 4;
+            this.txbBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbBas.Location = new System.Drawing.Point(233, 104);
+            this.txbBas.Name = "txbBas";
+            this.txbBas.Size = new System.Drawing.Size(100, 23);
+            this.txbBas.TabIndex = 4;
             // 
-            // ResultLabel
+            // lblSvar
             // 
-            this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Location = new System.Drawing.Point(287, 308);
-            this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(159, 13);
-            this.ResultLabel.TabIndex = 6;
-            this.ResultLabel.Text = "Hint: Use numbers like this, 10,5";
+            this.lblSvar.AutoSize = true;
+            this.lblSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSvar.ForeColor = System.Drawing.Color.Green;
+            this.lblSvar.Location = new System.Drawing.Point(99, 184);
+            this.lblSvar.Name = "lblSvar";
+            this.lblSvar.Size = new System.Drawing.Size(0, 18);
+            this.lblSvar.TabIndex = 6;
+            // 
+            // lblTexten
+            // 
+            this.lblTexten.AutoSize = true;
+            this.lblTexten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexten.Location = new System.Drawing.Point(37, 42);
+            this.lblTexten.Name = "lblTexten";
+            this.lblTexten.Size = new System.Drawing.Size(556, 20);
+            this.lblTexten.TabIndex = 7;
+            this.lblTexten.Text = "Matta in bas och höjd och klicka på beräkna knappen för att få triangels arean";
+            // 
+            // lblFel
+            // 
+            this.lblFel.AutoSize = true;
+            this.lblFel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFel.Location = new System.Drawing.Point(93, 206);
+            this.lblFel.Name = "lblFel";
+            this.lblFel.Size = new System.Drawing.Size(0, 17);
+            this.lblFel.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ResultLabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxBase);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBoxHeight);
-            this.Controls.Add(this.btnCalculate);
+            this.ClientSize = new System.Drawing.Size(654, 266);
+            this.Controls.Add(this.lblFel);
+            this.Controls.Add(this.lblTexten);
+            this.Controls.Add(this.lblSvar);
+            this.Controls.Add(this.lblBas);
+            this.Controls.Add(this.txbBas);
+            this.Controls.Add(this.lblHöjd);
+            this.Controls.Add(this.txbHöjd);
+            this.Controls.Add(this.btnBeräkna);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -107,12 +139,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.TextBox txtBoxHeight;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxBase;
-        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Button btnBeräkna;
+        private System.Windows.Forms.TextBox txbHöjd;
+        private System.Windows.Forms.Label lblHöjd;
+        private System.Windows.Forms.Label lblBas;
+        private System.Windows.Forms.TextBox txbBas;
+        private System.Windows.Forms.Label lblSvar;
+        private System.Windows.Forms.Label lblTexten;
+        private System.Windows.Forms.Label lblFel;
     }
 }
 
