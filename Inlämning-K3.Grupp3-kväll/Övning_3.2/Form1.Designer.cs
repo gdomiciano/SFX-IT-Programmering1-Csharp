@@ -34,6 +34,7 @@
             this.lblSvar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
+            this.lblFel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTeckenkod
@@ -53,6 +54,7 @@
             this.tbxTeckenkod.Name = "tbxTeckenkod";
             this.tbxTeckenkod.Size = new System.Drawing.Size(75, 23);
             this.tbxTeckenkod.TabIndex = 1;
+            this.tbxTeckenkod.TextChanged += new System.EventHandler(this.tbxTeckenkod_TextChanged);
             // 
             // btnHittaTecken
             // 
@@ -90,16 +92,27 @@
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.Location = new System.Drawing.Point(14, 26);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(448, 20);
+            this.lblText.Size = new System.Drawing.Size(487, 20);
             this.lblText.TabIndex = 5;
-            this.lblText.Text = "Matta in ett tal mellan 1 och 255 medan och klicka på knappen";
+            this.lblText.Text = "Mata in ett tal mellan 1 och 255 nedan och klicka sedan på knappen";
             this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFel
+            // 
+            this.lblFel.AutoSize = true;
+            this.lblFel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFel.Location = new System.Drawing.Point(97, 161);
+            this.lblFel.Name = "lblFel";
+            this.lblFel.Size = new System.Drawing.Size(0, 17);
+            this.lblFel.TabIndex = 6;
             // 
             // Teckenkoden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 171);
+            this.ClientSize = new System.Drawing.Size(527, 206);
+            this.Controls.Add(this.lblFel);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblSvar);
@@ -121,6 +134,7 @@
         private System.Windows.Forms.Label lblSvar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label lblFel;
     }
 }
 

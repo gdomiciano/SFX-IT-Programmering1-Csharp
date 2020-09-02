@@ -26,9 +26,9 @@ namespace Övning_3._4
             {
                 belopp = int.Parse(txbBelopp.Text);
                 double maxSedlar = belopp / sedlarbelopp;
-                if (belopp == 0)
+                if (belopp <= 0)
                 {
-                    lblFel.Text = "Belopp kan inte bli noll eller tum.";
+                    lblFel.Text = "Belopp kan inte bli noll eller minus.";
                 }
                 else
                 {

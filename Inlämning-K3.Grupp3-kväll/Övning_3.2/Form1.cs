@@ -20,8 +20,20 @@ namespace Övning_3._2
         private void btnHittaTecken_Click(object sender, EventArgs e)
         {
             string teckenkod = tbxTeckenkod.Text;
+            try
+            {
+                lblSvar.Text = "Teckenkoden " + teckenkod + " representera tecken " + (char) int.Parse(teckenkod) + '.';
+            }
+            catch (FormatException fel)
+            {
+                lblFel.Text = fel.Message;
+            }
+        }
 
-            lblSvar.Text = "Tackenkoden " + teckenkod + " representera tecken " + (char) int.Parse(teckenkod) + '.';
+        private void tbxTeckenkod_TextChanged(object sender, EventArgs e)
+        {
+            lblSvar.Text = "";
+            lblFel.Text = "";
         }
     }
 }
