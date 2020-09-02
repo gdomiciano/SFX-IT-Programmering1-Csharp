@@ -26,19 +26,18 @@ namespace Övning_3._4
             {
                 belopp = int.Parse(txbBelopp.Text);
                 double maxSedlar = belopp / sedlarbelopp;
-                lblSvar.Text = "Uttag: " + sedlarbelopp * maxSedlar;
+                if (belopp == 0)
+                {
+                    lblFel.Text = "Belopp kan inte bli noll eller tum.";
+                }
+                else
+                {
+                    lblSvar.Text = "Uttag: " + sedlarbelopp * maxSedlar + " kr";
+                }
             }
             catch (FormatException fel)
             {
-
-                if(belopp == 0)
-                {
-                    lblFel.Text = fel.Message + "Belopp kan inte bli noll eller tum.";
-                } else
-                {
-                    lblFel.Text = fel.Message + "Du kan inte använda punkt eller komma";
-                }
-                
+                lblFel.Text = fel.Message + "Du kan inte använda punkt eller komma";
             }
         }
 
