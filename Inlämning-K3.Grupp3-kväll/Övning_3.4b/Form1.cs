@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Övning_3._4b
@@ -13,81 +12,58 @@ namespace Övning_3._4b
 
         private void InputWithdraw_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char newInputCharacter = e.KeyChar;
+            char nyChar = e.KeyChar;
 
 
             //8 is the keycode for backspace
-            if (Char.IsDigit(newInputCharacter) || newInputCharacter == ',')
+            if (Char.IsDigit(nyChar) || nyChar == ',')
             {
-                //TODO make this read from elsewhere so they are decoupled.
-
-
-
-
-
             }
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter a valid value");
+                MessageBox.Show("Skriv bara seffror.");
 
             }
         }
 
 
-        private Int32 CalculateNumberOfBills(int billSize, double ammount)
-        {
-            return (int)(ammount / billSize);
-        }
 
-        private void UpdateValue(TextBox textBox, int value)
-        {
-            textBox.Text = value.ToString();
-        }
 
         private void InputWithdraw_TextChanged(object sender, EventArgs e)
         {
             if (InputWithdraw.Text.Length > 0)
             {
-                const int billHundra = 100;
-                const int billFemHundra = 500;
+                const int sedelHundra = 100;
+                const int sedelFemHundra = 500;
 
-                double ammount = Double.Parse(InputWithdraw.Text);
+                double belop = Double.Parse(InputWithdraw.Text);
 
-                int hundraAmmount = billHundra * CalculateNumberOfBills(billHundra, ammount);
-                int femHundraAmmount = billFemHundra * CalculateNumberOfBills(billFemHundra, ammount);
+                int attFåFemHundrar = (int)(belop / sedelFemHundra);
 
-                UpdateValue(HundraBox, hundraAmmount);
-                UpdateValue(FemHundraBox, femHundraAmmount);
+                int belopMinusFemHundrarna = (int)belop - attFåFemHundrar * sedelFemHundra;
+                int attFåHundrar = (int)(belopMinusFemHundrarna / sedelHundra);
+
+
+
+
+                UpdateraMeddelande(FemHundraBox, attFåFemHundrar * sedelFemHundra);
+                UpdateraMeddelande(HundraBox, attFåHundrar * sedelHundra);
             }
 
         }
+
+
+
+        private void UpdateraMeddelande(TextBox textBox, int numer)
+        {
+            textBox.Text = numer.ToString();
+        }
+
+
     }
 
 
 
-    //TODO make this a class for future scaling things
 
-    public class BankAutomat
-    {
-        public enum CurrencyTypes
-        {
-            Tjugo = 20,
-            Hundra = 100,
-            TvåHundra = 200,
-            FemHundra = 500
-
-        }
-
-        List<CurrencyTypes> availableCurrencies;
-
-        public void WithDrawMoney(CurrencyTypes currency)
-        {
-
-        }
-
-
-
-
-    }
 }
