@@ -5,51 +5,35 @@ namespace Övning_3._3
 {
     public partial class Form1 : Form
     {
-        double inputNumber = -1;
+        double numer = -1;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void ButtonToRoundNumbers_Click(object sender, EventArgs e)
+
+
+        private int AvRundaNumer(double dubelNumer)
         {
-            string inputValue = TextBoxInput.Text;
+            int fastNumer = (int)dubelNumer;
+            int förstaDecimal = (int)((dubelNumer - fastNumer) * 10);
 
-            if (HasValidInput(inputValue))
+            if (förstaDecimal >= 5)
             {
-                TextBoxInput.Text = RoundNumber(inputNumber).ToString();
-            }
-            else
-            {
-                TextBoxInput.Text = "Error";
-            }
-        }
-
-        private int RoundNumber(double doubleNumber)
-        {
-            int frakNumber = (int)doubleNumber;
-            int firstDecimal = (int)((doubleNumber - frakNumber) * 10);
-
-            if (firstDecimal >= 5)
-            {
-                frakNumber++;
+                fastNumer++;
             }
 
-            return frakNumber;
+            return fastNumer;
 
         }
 
-        /// <summary>
-        /// Check if the input passed is indeed a valid double number.
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        private Boolean HasValidInput(string message)
+
+        private Boolean ÄrRätt(string texten)
         {
             try
             {
-                inputNumber = Double.Parse(message);
+                numer = Double.Parse(texten);
                 return true;
             }
             catch (Exception)
@@ -61,6 +45,18 @@ namespace Övning_3._3
 
         }
 
+        private void RundKnapp_Click(object sender, EventArgs e)
+        {
+            string texten = TextBoxTexten.Text;
 
+            if (ÄrRätt(texten))
+            {
+                TextBoxTexten.Text = AvRundaNumer(numer).ToString();
+            }
+            else
+            {
+                TextBoxTexten.Text = "Fel, bara numer.";
+            }
+        }
     }
 }

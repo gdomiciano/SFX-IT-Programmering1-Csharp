@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.InputWithdraw = new System.Windows.Forms.TextBox();
+            this.Belopp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,14 +36,13 @@
             this.HunrarLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // InputWithdraw
+            // Belopp
             // 
-            this.InputWithdraw.Location = new System.Drawing.Point(356, 157);
-            this.InputWithdraw.Name = "InputWithdraw";
-            this.InputWithdraw.Size = new System.Drawing.Size(100, 20);
-            this.InputWithdraw.TabIndex = 0;
-            this.InputWithdraw.TextChanged += new System.EventHandler(this.InputWithdraw_TextChanged);
-            this.InputWithdraw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputWithdraw_KeyPress);
+            this.Belopp.Location = new System.Drawing.Point(356, 157);
+            this.Belopp.Name = "Belopp";
+            this.Belopp.Size = new System.Drawing.Size(100, 20);
+            this.Belopp.TabIndex = 0;
+            this.Belopp.TextChanged += new System.EventHandler(this.Textharändrats);
             // 
             // label1
             // 
@@ -100,7 +99,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.InputWithdraw);
+            this.Controls.Add(this.Belopp);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -110,7 +109,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox InputWithdraw;
+        private System.Windows.Forms.TextBox Belopp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -10,12 +10,10 @@ namespace Övning_3._4b
             InitializeComponent();
         }
 
-        private void InputWithdraw_KeyPress(object sender, KeyPressEventArgs e)
+        private void Tryckpåknappen(object sender, KeyPressEventArgs e)
         {
             char nyChar = e.KeyChar;
 
-
-            //8 is the keycode for backspace
             if (Char.IsDigit(nyChar) || nyChar == ',')
             {
             }
@@ -30,14 +28,14 @@ namespace Övning_3._4b
 
 
 
-        private void InputWithdraw_TextChanged(object sender, EventArgs e)
+        private void Textharändrats(object sender, EventArgs e)
         {
-            if (InputWithdraw.Text.Length > 0)
+            if (Belopp.Text.Length > 0)
             {
                 const int sedelHundra = 100;
                 const int sedelFemHundra = 500;
 
-                double belop = Double.Parse(InputWithdraw.Text);
+                double belop = Double.Parse(Belopp.Text);
 
                 int attFåFemHundrar = (int)(belop / sedelFemHundra);
 
@@ -59,7 +57,6 @@ namespace Övning_3._4b
         {
             label.Text = numer.ToString();
         }
-
 
     }
 
