@@ -42,6 +42,7 @@
             this.txbDecimaltalet.Name = "txbDecimaltalet";
             this.txbDecimaltalet.Size = new System.Drawing.Size(100, 23);
             this.txbDecimaltalet.TabIndex = 0;
+            this.txbDecimaltalet.TextChanged += new System.EventHandler(this.txbDecimaltalet_TextChanged);
             // 
             // btnAvrunda
             // 
@@ -52,7 +53,7 @@
             this.btnAvrunda.TabIndex = 1;
             this.btnAvrunda.Text = "Avrunda";
             this.btnAvrunda.UseVisualStyleBackColor = true;
-            this.btnAvrunda.Click += new System.EventHandler(this.RundKnapp_Click);
+            this.btnAvrunda.Click += new System.EventHandler(this.btnAvrunda_Click);
             // 
             // lblTexten
             // 
@@ -83,7 +84,6 @@
             this.lblFel.Name = "lblFel";
             this.lblFel.Size = new System.Drawing.Size(0, 17);
             this.lblFel.TabIndex = 4;
-            this.lblFel.Click += new System.EventHandler(this.label1_Click);
             // 
             // DecimaltalTillHeltal
             // 

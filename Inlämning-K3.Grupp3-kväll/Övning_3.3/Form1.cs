@@ -5,63 +5,58 @@ namespace Övning_3._3
 {
     public partial class DecimaltalTillHeltal : Form
     {
-        double numer = -1;
+        double nummer = -1;
 
         public DecimaltalTillHeltal()
         {
             InitializeComponent();
         }
 
-
-
-        private int AvRundaNumer(double dubelNumer)
+        private int avrundaNummer(double dubbelNummer)
         {
-            int fastNumer = (int)dubelNumer;
-            int förstaDecimal = (int)((dubelNumer - fastNumer) * 10);
+            int fastNummer = (int)dubbelNummer;
+            int förstaDecimal = (int)((dubbelNummer - fastNummer) * 10);
 
             if (förstaDecimal >= 5)
             {
-                fastNumer++;
+                fastNummer++;
             }
 
-            return fastNumer;
-
+            return fastNummer;
         }
 
-
-        private Boolean ÄrRätt(string texten)
+        private Boolean validera(string texten)
         {
             try
             {
-                numer = Double.Parse(texten);
+                string nyaTexten = texten.Replace('.', ',');
+                nummer = double.Parse(nyaTexten);
                 return true;
             }
             catch (Exception)
             {
-
                 return false;
             }
-
-
         }
 
-        private void RundKnapp_Click(object sender, EventArgs e)
+        private void btnAvrunda_Click(object sender, EventArgs e)
         {
             string texten = txbDecimaltalet.Text;
 
-            if (ÄrRätt(texten))
+            if (validera(texten))
             {
-                txbDecimaltalet.Text = AvRundaNumer(numer).ToString();
+                lblSvar.Text = avrundaNummer(nummer).ToString();
             }
             else
             {
-                txbDecimaltalet.Text = "Fel, bara numer.";
+                lblFel.Text = "Fel, mata bara in nummer.";
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void txbDecimaltalet_TextChanged(object sender, EventArgs e)
         {
-
+            lblFel.Text = "";
+            lblSvar.Text = "";
         }
     }
 }
