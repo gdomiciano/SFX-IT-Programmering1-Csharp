@@ -10,11 +10,47 @@ using System.Windows.Forms;
 
 namespace Övning_3._4
 {
-    public partial class Form1 : Form
+    public partial class Uttgsautomat : Form
     {
-        public Form1()
+        public Uttgsautomat()
         {
             InitializeComponent();
+        }
+
+        private void btnVisa_Click(object sender, EventArgs e)
+        {
+            int sedlarbelopp = 100;
+            int belopp = 0;
+
+            try
+            {
+                belopp = int.Parse(txbBelopp.Text);
+                double maxSedlar = belopp / sedlarbelopp;
+                lblSvar.Text = "Uttag: " + sedlarbelopp * maxSedlar;
+            }
+            catch (FormatException fel)
+            {
+
+                if(belopp == 0)
+                {
+                    lblFel.Text = fel.Message + "Belopp kan inte bli noll eller tum.";
+                } else
+                {
+                    lblFel.Text = fel.Message + "Du kan inte använda punkt eller komma";
+                }
+                
+            }
+        }
+
+        private void txbBelopp_TextChanged(object sender, EventArgs e)
+        {
+            lblSvar.Text = "";
+            lblFel.Text = "";
+        }
+
+        private void Uttgsautomat_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
