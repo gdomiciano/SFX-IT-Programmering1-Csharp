@@ -40,11 +40,11 @@
             // 
             this.lblTexten.AutoSize = true;
             this.lblTexten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexten.Location = new System.Drawing.Point(141, 30);
+            this.lblTexten.Location = new System.Drawing.Point(110, 26);
             this.lblTexten.Name = "lblTexten";
-            this.lblTexten.Size = new System.Drawing.Size(429, 20);
+            this.lblTexten.Size = new System.Drawing.Size(454, 20);
             this.lblTexten.TabIndex = 0;
-            this.lblTexten.Text = "Skriva in ett belopp medan för att visa hur stort kan du uttag";
+            this.lblTexten.Text = "Skriv in ett belopp nedan för att se hur stort uttag kan du kan ta";
             // 
             // lblBelopp
             // 

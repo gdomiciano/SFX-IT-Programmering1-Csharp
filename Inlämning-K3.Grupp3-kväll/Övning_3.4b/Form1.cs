@@ -10,54 +10,41 @@ namespace Övning_3._4b
             InitializeComponent();
         }
 
-        private void Tryckpåknappen(object sender, KeyPressEventArgs e)
+        private void UppdateraSvar(Label etiket, int nummer, int sedel)
         {
-            char nyChar = e.KeyChar;
+            etiket.Text = "Uttag i " + sedel + "-sedlar:" + nummer.ToString() + "kr";
+        }
 
-            if (Char.IsDigit(nyChar) || nyChar == ',')
-            {  
-            }
-            else
+        private void txbBelopp_TextChanged(object sender, EventArgs e)
+        {
+            lblSvarFemHundra.Text = "";
+            lblSvarHundra.Text = "";
+        }
+
+        private void btnVisa_Click(object sender, EventArgs e)
+        {
+            try
             {
-                e.Handled = true;
-                MessageBox.Show("Skriv bara seffror.");
+                if (txbBelopp.Text.Length > 0)
+                {
+                    const int sedelHundra = 100;
+                    const int sedelFemHundra = 500;
 
-            }
-        }
+                    double belopp = double.Parse(txbBelopp.Text);
 
+                    int attFåFemHundraLappar = (int)(belopp / sedelFemHundra);
 
+                    int beloppMinusFemHundraLapparna = (int)belopp - attFåFemHundraLappar * sedelFemHundra;
+                    int attFåHundraLappar = (int)(beloppMinusFemHundraLapparna / sedelHundra);
 
-
-        private void Textharändrats(object sender, EventArgs e)
-        {
-            if (Belopp.Text.Length > 0)
+                    UppdateraSvar(lblSvarFemHundra, attFåFemHundraLappar * sedelFemHundra, sedelFemHundra);
+                    UppdateraSvar(lblSvarHundra, attFåHundraLappar * sedelHundra, sedelHundra);
+                }
+            } catch (FormatException fel)
             {
-                const int sedelHundra = 100;
-                const int sedelFemHundra = 500;
-
-                double belop = Double.Parse(Belopp.Text);
-
-                int attFåFemHundrar = (int)(belop / sedelFemHundra);
-
-                int belopMinusFemHundrarna = (int)belop - attFåFemHundrar * sedelFemHundra;
-                int attFåHundrar = (int)(belopMinusFemHundrarna / sedelHundra);
-
-
-
-
-                UpdateraMeddelande(FemHundrarLabel, attFåFemHundrar * sedelFemHundra);
-                UpdateraMeddelande(HunrarLabel, attFåHundrar * sedelHundra);
+                MessageBox.Show(fel.Message +" Skriv bara siffror.", "Fel", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-
-
-
-        private void UpdateraMeddelande(Label label, int numer)
-        {
-            label.Text = numer.ToString();
-        }
-
     }
 
 

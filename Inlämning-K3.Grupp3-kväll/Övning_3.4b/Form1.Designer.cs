@@ -28,78 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Belopp = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.FemHundrarLabel = new System.Windows.Forms.Label();
-            this.HunrarLabel = new System.Windows.Forms.Label();
+            this.lblFel = new System.Windows.Forms.Label();
+            this.lblSvarFemHundra = new System.Windows.Forms.Label();
+            this.btnVisa = new System.Windows.Forms.Button();
+            this.txbBelopp = new System.Windows.Forms.TextBox();
+            this.lblBelopp = new System.Windows.Forms.Label();
+            this.lblTexten = new System.Windows.Forms.Label();
+            this.lblSvarHundra = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Belopp
+            // lblFel
             // 
-            this.Belopp.Location = new System.Drawing.Point(356, 157);
-            this.Belopp.Name = "Belopp";
-            this.Belopp.Size = new System.Drawing.Size(100, 20);
-            this.Belopp.TabIndex = 0;
-            this.Belopp.TextChanged += new System.EventHandler(this.Textharändrats);
+            this.lblFel.AutoSize = true;
+            this.lblFel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFel.Location = new System.Drawing.Point(60, 230);
+            this.lblFel.Name = "lblFel";
+            this.lblFel.Size = new System.Drawing.Size(0, 17);
+            this.lblFel.TabIndex = 13;
             // 
-            // label1
+            // lblSvarFemHundra
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(356, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Uttags Belopp";
+            this.lblSvarFemHundra.AutoSize = true;
+            this.lblSvarFemHundra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSvarFemHundra.ForeColor = System.Drawing.Color.Green;
+            this.lblSvarFemHundra.Location = new System.Drawing.Point(197, 135);
+            this.lblSvarFemHundra.Name = "lblSvarFemHundra";
+            this.lblSvarFemHundra.Size = new System.Drawing.Size(0, 17);
+            this.lblSvarFemHundra.TabIndex = 12;
             // 
-            // label2
+            // btnVisa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 227);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Uttag i 500-sedlar";
+            this.btnVisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisa.Location = new System.Drawing.Point(307, 66);
+            this.btnVisa.Name = "btnVisa";
+            this.btnVisa.Size = new System.Drawing.Size(75, 43);
+            this.btnVisa.TabIndex = 11;
+            this.btnVisa.Text = "Visa";
+            this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
-            // label3
+            // txbBelopp
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 266);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Uttag i 100-sedlar";
+            this.txbBelopp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbBelopp.Location = new System.Drawing.Point(200, 86);
+            this.txbBelopp.Name = "txbBelopp";
+            this.txbBelopp.Size = new System.Drawing.Size(100, 23);
+            this.txbBelopp.TabIndex = 10;
+            this.txbBelopp.TextChanged += new System.EventHandler(this.txbBelopp_TextChanged);
             // 
-            // FemHundrarLabel
+            // lblBelopp
             // 
-            this.FemHundrarLabel.AutoSize = true;
-            this.FemHundrarLabel.Location = new System.Drawing.Point(299, 227);
-            this.FemHundrarLabel.Name = "FemHundrarLabel";
-            this.FemHundrarLabel.Size = new System.Drawing.Size(10, 13);
-            this.FemHundrarLabel.TabIndex = 6;
-            this.FemHundrarLabel.Text = "-";
+            this.lblBelopp.AutoSize = true;
+            this.lblBelopp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBelopp.Location = new System.Drawing.Point(197, 66);
+            this.lblBelopp.Name = "lblBelopp";
+            this.lblBelopp.Size = new System.Drawing.Size(56, 17);
+            this.lblBelopp.TabIndex = 9;
+            this.lblBelopp.Text = "Belopp:";
             // 
-            // HunrarLabel
+            // lblTexten
             // 
-            this.HunrarLabel.AutoSize = true;
-            this.HunrarLabel.Location = new System.Drawing.Point(299, 266);
-            this.HunrarLabel.Name = "HunrarLabel";
-            this.HunrarLabel.Size = new System.Drawing.Size(10, 13);
-            this.HunrarLabel.TabIndex = 7;
-            this.HunrarLabel.Text = "-";
+            this.lblTexten.AutoSize = true;
+            this.lblTexten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexten.Location = new System.Drawing.Point(81, 26);
+            this.lblTexten.Name = "lblTexten";
+            this.lblTexten.Size = new System.Drawing.Size(454, 20);
+            this.lblTexten.TabIndex = 8;
+            this.lblTexten.Text = "Skriv in ett belopp nedan för att se hur stort uttag kan du kan ta\r\n";
+            // 
+            // lblSvarHundra
+            // 
+            this.lblSvarHundra.AutoSize = true;
+            this.lblSvarHundra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSvarHundra.ForeColor = System.Drawing.Color.Green;
+            this.lblSvarHundra.Location = new System.Drawing.Point(197, 170);
+            this.lblSvarHundra.Name = "lblSvarHundra";
+            this.lblSvarHundra.Size = new System.Drawing.Size(0, 17);
+            this.lblSvarHundra.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.HunrarLabel);
-            this.Controls.Add(this.FemHundrarLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Belopp);
+            this.ClientSize = new System.Drawing.Size(800, 283);
+            this.Controls.Add(this.lblSvarHundra);
+            this.Controls.Add(this.lblFel);
+            this.Controls.Add(this.lblSvarFemHundra);
+            this.Controls.Add(this.btnVisa);
+            this.Controls.Add(this.txbBelopp);
+            this.Controls.Add(this.lblBelopp);
+            this.Controls.Add(this.lblTexten);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -108,13 +127,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox Belopp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label FemHundrarLabel;
-        private System.Windows.Forms.Label HunrarLabel;
+        private System.Windows.Forms.Label lblFel;
+        private System.Windows.Forms.Label lblSvarFemHundra;
+        private System.Windows.Forms.Button btnVisa;
+        private System.Windows.Forms.TextBox txbBelopp;
+        private System.Windows.Forms.Label lblBelopp;
+        private System.Windows.Forms.Label lblTexten;
+        private System.Windows.Forms.Label lblSvarHundra;
     }
 }
 

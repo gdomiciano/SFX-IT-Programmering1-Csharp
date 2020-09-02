@@ -19,20 +19,20 @@ namespace Övning_3._4
 
         private void btnVisa_Click(object sender, EventArgs e)
         {
-            int sedlarbelopp = 100;
+            int sedelBelopp = 100;
             int belopp = 0;
 
             try
             {
                 belopp = int.Parse(txbBelopp.Text);
-                double maxSedlar = belopp / sedlarbelopp;
+                double maxSedlar = belopp / sedelBelopp;
                 if (belopp <= 0)
                 {
                     lblFel.Text = "Belopp kan inte bli noll eller minus.";
                 }
                 else
                 {
-                    lblSvar.Text = "Uttag: " + sedlarbelopp * maxSedlar + " kr";
+                    lblSvar.Text = "Uttag: " + sedelBelopp * maxSedlar + " kr";
                 }
             }
             catch (FormatException fel)
