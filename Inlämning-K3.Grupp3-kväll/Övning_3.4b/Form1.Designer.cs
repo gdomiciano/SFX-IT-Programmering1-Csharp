@@ -31,9 +31,9 @@
             this.InputWithdraw = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.FemHundraBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.HundraBox = new System.Windows.Forms.TextBox();
+            this.FemHundrarLabel = new System.Windows.Forms.Label();
+            this.HunrarLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputWithdraw
@@ -63,13 +63,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Uttag i 500-sedlar";
             // 
-            // FemHundraBox
-            // 
-            this.FemHundraBox.Location = new System.Drawing.Point(299, 224);
-            this.FemHundraBox.Name = "FemHundraBox";
-            this.FemHundraBox.Size = new System.Drawing.Size(100, 20);
-            this.FemHundraBox.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -79,22 +72,33 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Uttag i 100-sedlar";
             // 
-            // HundraBox
+            // FemHundrarLabel
             // 
-            this.HundraBox.Location = new System.Drawing.Point(299, 263);
-            this.HundraBox.Name = "HundraBox";
-            this.HundraBox.Size = new System.Drawing.Size(100, 20);
-            this.HundraBox.TabIndex = 4;
+            this.FemHundrarLabel.AutoSize = true;
+            this.FemHundrarLabel.Location = new System.Drawing.Point(299, 227);
+            this.FemHundrarLabel.Name = "FemHundrarLabel";
+            this.FemHundrarLabel.Size = new System.Drawing.Size(10, 13);
+            this.FemHundrarLabel.TabIndex = 6;
+            this.FemHundrarLabel.Text = "-";
+            // 
+            // HunrarLabel
+            // 
+            this.HunrarLabel.AutoSize = true;
+            this.HunrarLabel.Location = new System.Drawing.Point(299, 266);
+            this.HunrarLabel.Name = "HunrarLabel";
+            this.HunrarLabel.Size = new System.Drawing.Size(10, 13);
+            this.HunrarLabel.TabIndex = 7;
+            this.HunrarLabel.Text = "-";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HunrarLabel);
+            this.Controls.Add(this.FemHundrarLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.HundraBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.FemHundraBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InputWithdraw);
             this.Name = "Form1";
@@ -109,9 +113,9 @@
         private System.Windows.Forms.TextBox InputWithdraw;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox FemHundraBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox HundraBox;
+        private System.Windows.Forms.Label FemHundrarLabel;
+        private System.Windows.Forms.Label HunrarLabel;
     }
 }
 

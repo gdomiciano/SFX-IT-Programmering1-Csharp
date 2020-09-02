@@ -47,17 +47,17 @@ namespace Övning_3._4b
 
 
 
-                UpdateraMeddelande(FemHundraBox, attFåFemHundrar * sedelFemHundra);
-                UpdateraMeddelande(HundraBox, attFåHundrar * sedelHundra);
+                UpdateraMeddelande(FemHundrarLabel, attFåFemHundrar * sedelFemHundra);
+                UpdateraMeddelande(HunrarLabel, attFåHundrar * sedelHundra);
             }
 
         }
 
 
 
-        private void UpdateraMeddelande(TextBox textBox, int numer)
+        private void UpdateraMeddelande(Label label, int numer)
         {
-            textBox.Text = numer.ToString();
+            label.Text = numer.ToString();
         }
 
 
