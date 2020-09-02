@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace Övning_3._3
 {
-    public partial class Form1 : Form
+    public partial class DecimaltalTillHeltal : Form
     {
         double inputNumber = -1;
 
-        public Form1()
+        public DecimaltalTillHeltal()
         {
             InitializeComponent();
         }

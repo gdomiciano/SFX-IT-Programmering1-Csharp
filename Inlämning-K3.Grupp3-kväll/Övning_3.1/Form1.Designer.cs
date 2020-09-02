@@ -103,9 +103,9 @@
             this.lblTexten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTexten.Location = new System.Drawing.Point(37, 42);
             this.lblTexten.Name = "lblTexten";
-            this.lblTexten.Size = new System.Drawing.Size(556, 20);
+            this.lblTexten.Size = new System.Drawing.Size(547, 20);
             this.lblTexten.TabIndex = 7;
-            this.lblTexten.Text = "Matta in bas och höjd och klicka på beräkna knappen för att få triangels arean";
+            this.lblTexten.Text = "Mata in bas och höjd och klicka på beräknaknappen för att få triangels arean";
             // 
             // lblFel
             // 

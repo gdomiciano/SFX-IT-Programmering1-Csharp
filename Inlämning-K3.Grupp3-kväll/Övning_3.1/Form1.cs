@@ -51,6 +51,5 @@ namespace Övning_3._1
         {
             return (tHöjd * tBas) / 2;
         }
-
     }
 }

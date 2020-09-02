@@ -17,7 +17,7 @@ namespace Övning_3._4b
 
             //8 is the keycode for backspace
             if (Char.IsDigit(nyChar) || nyChar == ',')
-            {
+            {  
             }
             else
             {
