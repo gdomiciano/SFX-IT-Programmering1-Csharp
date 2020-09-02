@@ -50,9 +50,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(356, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Ammount To Withdraw";
+            this.label1.Text = "Uttags Belopp";
             // 
             // label2
             // 
