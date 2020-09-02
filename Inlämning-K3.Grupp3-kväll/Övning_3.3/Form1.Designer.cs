@@ -28,43 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxTexten = new System.Windows.Forms.TextBox();
-            this.RundKnapp = new System.Windows.Forms.Button();
+            this.txbDecimaltalet = new System.Windows.Forms.TextBox();
+            this.btnAvrunda = new System.Windows.Forms.Button();
+            this.lblTexten = new System.Windows.Forms.Label();
+            this.lblSvar = new System.Windows.Forms.Label();
+            this.lblFel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TextBoxTexten
+            // txbDecimaltalet
             // 
-            this.TextBoxTexten.Location = new System.Drawing.Point(373, 174);
-            this.TextBoxTexten.Name = "TextBoxTexten";
-            this.TextBoxTexten.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxTexten.TabIndex = 0;
+            this.txbDecimaltalet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDecimaltalet.Location = new System.Drawing.Point(118, 85);
+            this.txbDecimaltalet.Name = "txbDecimaltalet";
+            this.txbDecimaltalet.Size = new System.Drawing.Size(100, 23);
+            this.txbDecimaltalet.TabIndex = 0;
             // 
-            // RundKnapp
+            // btnAvrunda
             // 
-            this.RundKnapp.Location = new System.Drawing.Point(387, 220);
-            this.RundKnapp.Name = "RundKnapp";
-            this.RundKnapp.Size = new System.Drawing.Size(75, 23);
-            this.RundKnapp.TabIndex = 1;
-            this.RundKnapp.Text = "AvRunda";
-            this.RundKnapp.UseVisualStyleBackColor = true;
-            this.RundKnapp.Click += new System.EventHandler(this.RundKnapp_Click);
+            this.btnAvrunda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvrunda.Location = new System.Drawing.Point(243, 85);
+            this.btnAvrunda.Name = "btnAvrunda";
+            this.btnAvrunda.Size = new System.Drawing.Size(75, 23);
+            this.btnAvrunda.TabIndex = 1;
+            this.btnAvrunda.Text = "Avrunda";
+            this.btnAvrunda.UseVisualStyleBackColor = true;
+            this.btnAvrunda.Click += new System.EventHandler(this.RundKnapp_Click);
+            // 
+            // lblTexten
+            // 
+            this.lblTexten.AutoSize = true;
+            this.lblTexten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexten.Location = new System.Drawing.Point(32, 39);
+            this.lblTexten.Name = "lblTexten";
+            this.lblTexten.Size = new System.Drawing.Size(376, 20);
+            this.lblTexten.TabIndex = 2;
+            this.lblTexten.Text = "Mata in ett decimaltal för att avrunda det till ett heltal";
+            // 
+            // lblSvar
+            // 
+            this.lblSvar.AutoSize = true;
+            this.lblSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSvar.ForeColor = System.Drawing.Color.Green;
+            this.lblSvar.Location = new System.Drawing.Point(36, 138);
+            this.lblSvar.Name = "lblSvar";
+            this.lblSvar.Size = new System.Drawing.Size(0, 17);
+            this.lblSvar.TabIndex = 3;
+            // 
+            // lblFel
+            // 
+            this.lblFel.AutoSize = true;
+            this.lblFel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblFel.Location = new System.Drawing.Point(39, 174);
+            this.lblFel.Name = "lblFel";
+            this.lblFel.Size = new System.Drawing.Size(0, 17);
+            this.lblFel.TabIndex = 4;
+            this.lblFel.Click += new System.EventHandler(this.label1_Click);
             // 
             // DecimaltalTillHeltal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-<<<<<<< HEAD
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ButtonToRoundNumbers);
-            this.Controls.Add(this.TextBoxInput);
+            this.ClientSize = new System.Drawing.Size(475, 210);
+            this.Controls.Add(this.lblFel);
+            this.Controls.Add(this.lblSvar);
+            this.Controls.Add(this.lblTexten);
+            this.Controls.Add(this.btnAvrunda);
+            this.Controls.Add(this.txbDecimaltalet);
             this.Name = "DecimaltalTillHeltal";
-=======
-            this.Controls.Add(this.RundKnapp);
-            this.Controls.Add(this.TextBoxTexten);
-            this.Name = "Form1";
->>>>>>> bc0c34981a2547eb8179e4cba2468ee054f05a7d
-            this.Text = "Form1";
+            this.Text = "Decimaltal till heltal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,8 +104,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBoxTexten;
-        private System.Windows.Forms.Button RundKnapp;
+        private System.Windows.Forms.TextBox txbDecimaltalet;
+        private System.Windows.Forms.Button btnAvrunda;
+        private System.Windows.Forms.Label lblTexten;
+        private System.Windows.Forms.Label lblSvar;
+        private System.Windows.Forms.Label lblFel;
     }
 }
 

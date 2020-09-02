@@ -47,16 +47,21 @@ namespace Övning_3._3
 
         private void RundKnapp_Click(object sender, EventArgs e)
         {
-            string texten = TextBoxTexten.Text;
+            string texten = txbDecimaltalet.Text;
 
             if (ÄrRätt(texten))
             {
-                TextBoxTexten.Text = AvRundaNumer(numer).ToString();
+                txbDecimaltalet.Text = AvRundaNumer(numer).ToString();
             }
             else
             {
-                TextBoxTexten.Text = "Fel, bara numer.";
+                txbDecimaltalet.Text = "Fel, bara numer.";
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
