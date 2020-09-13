@@ -1,0 +1,10 @@
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5.2.csprojAssemblyReference.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5._2.Form1.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5._2.Properties.Resources.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5.2.csproj.GenerateResource.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5.2.csproj.CoreCompileInputs.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\bin\Debug\Uppgift_5.2.exe.config
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\bin\Debug\Uppgift_5.2.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\bin\Debug\Uppgift_5.2.pdb
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5.2.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Uppgifter\Uppgift_5.2\Uppgift_5.2\obj\Debug\Uppgift_5.2.pdb
