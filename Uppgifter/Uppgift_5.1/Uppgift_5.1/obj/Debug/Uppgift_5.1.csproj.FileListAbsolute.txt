@@ -1,0 +1,10 @@
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\bin\Debug\Uppgift_5.1.exe.config
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\bin\Debug\Uppgift_5.1.exe
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\bin\Debug\Uppgift_5.1.pdb
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5.1.csprojAssemblyReference.cache
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5._1.Fönster.resources
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5._1.Properties.Resources.resources
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5.1.csproj.GenerateResource.cache
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5.1.csproj.CoreCompileInputs.cache
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5.1.exe
+C:\Users\geisy\source\repos\Uppgift_5.1\Uppgift_5.1\obj\Debug\Uppgift_5.1.pdb
