@@ -58,6 +58,7 @@
             this.tbxTal.Name = "tbxTal";
             this.tbxTal.Size = new System.Drawing.Size(100, 26);
             this.tbxTal.TabIndex = 1;
+            this.tbxTal.TextChanged += new System.EventHandler(this.tbxTal_TextChanged);
             // 
             // lblSvar
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.tbxTal);
             this.Controls.Add(this.lblEtikett);
             this.Name = "Fönster";
-            this.Text = "Magin of ett";
+            this.Text = "Magin av ett";
             this.ResumeLayout(false);
             this.PerformLayout();
 

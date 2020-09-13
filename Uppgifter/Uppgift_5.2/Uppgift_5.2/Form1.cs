@@ -77,5 +77,11 @@ namespace Uppgift_5._2
                 }
             }
         }
+
+        private void txbTusental_TextChanged(object sender, EventArgs e)
+        {
+            lblSvar.Text = "";
+            lblFel.Text = "";
+        }
     }
 }

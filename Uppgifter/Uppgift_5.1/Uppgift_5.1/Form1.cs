@@ -58,7 +58,7 @@ namespace Uppgift_5._1
                     nyttTalDouble = double.Parse(nyttTalText);
                     return (int)nyttTalDouble;
                 }
-                 else if (tbxTal.Text.Contains(","))
+                 else if (text.Contains(","))
                  {
                     nyttTalDouble = double.Parse(text);
                     return (int)nyttTalDouble;
@@ -68,6 +68,18 @@ namespace Uppgift_5._1
                     return -1;
                 }
             }
+        }
+
+        private void tbxTal_TextChanged(object sender, EventArgs e)
+        {
+            lblAddera1.Text = "";
+            lblMultiplicera2.Text = "";
+            lblSubtrahera6.Text = "";
+            lblHalvera.Text = "";
+            lblAddera3.Text = "";
+            lblSubtraheraTalet.Text = "";
+            lblSvar.Text = "";
+            lblFel.Text = "";
         }
     }
 }

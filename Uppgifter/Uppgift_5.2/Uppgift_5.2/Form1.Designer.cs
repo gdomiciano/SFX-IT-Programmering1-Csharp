@@ -52,6 +52,7 @@
             this.txbTusental.Name = "txbTusental";
             this.txbTusental.Size = new System.Drawing.Size(140, 20);
             this.txbTusental.TabIndex = 1;
+            this.txbTusental.TextChanged += new System.EventHandler(this.txbTusental_TextChanged);
             // 
             // btnAvrunda
             // 
