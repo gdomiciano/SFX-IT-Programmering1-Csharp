@@ -1,0 +1,9 @@
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7._4_switch.Properties.Resources.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7.4_switch.csproj.GenerateResource.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7.4_switch.csproj.CoreCompileInputs.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7._4.Switch.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\bin\Debug\Uppgift_7.4_switch.exe.config
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\bin\Debug\Uppgift_7.4_switch.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\bin\Debug\Uppgift_7.4_switch.pdb
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7.4_switch.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K7-grupp3-kväll\Uppgift_7.4\Uppgift_7.4_switch\obj\Debug\Uppgift_7.4_switch.pdb
