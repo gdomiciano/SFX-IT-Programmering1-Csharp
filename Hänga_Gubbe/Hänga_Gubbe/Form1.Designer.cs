@@ -1,6 +1,6 @@
 ﻿namespace Hänga_Gubbe
 {
-    partial class Form1
+    partial class Spel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Spel));
             this.label1 = new System.Windows.Forms.Label();
             this.mTbxSvar = new System.Windows.Forms.MaskedTextBox();
             this.pbxMark = new System.Windows.Forms.PictureBox();
             this.tbxGissa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.pbxGubbe = new System.Windows.Forms.PictureBox();
             this.tbxVisa = new System.Windows.Forms.TextBox();
             this.btnSlumpa = new System.Windows.Forms.Button();
@@ -55,52 +56,60 @@
             // 
             this.mTbxSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mTbxSvar.Location = new System.Drawing.Point(31, 30);
-            this.mTbxSvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mTbxSvar.Margin = new System.Windows.Forms.Padding(4);
             this.mTbxSvar.Name = "mTbxSvar";
             this.mTbxSvar.Size = new System.Drawing.Size(116, 23);
             this.mTbxSvar.TabIndex = 1;
             this.mTbxSvar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mTbxSvar.UseSystemPasswordChar = true;
+            this.mTbxSvar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mTbxSvar_KeyUp);
             // 
             // pbxMark
             // 
             this.pbxMark.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.pbxMark.Location = new System.Drawing.Point(13, 61);
-            this.pbxMark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxMark.Margin = new System.Windows.Forms.Padding(4);
             this.pbxMark.Name = "pbxMark";
             this.pbxMark.Size = new System.Drawing.Size(300, 330);
             this.pbxMark.TabIndex = 2;
             this.pbxMark.TabStop = false;
+            this.pbxMark.Paint += new System.Windows.Forms.PaintEventHandler(this.pbxMark_Paint);
             // 
             // tbxGissa
             // 
             this.tbxGissa.AcceptsReturn = true;
-            this.tbxGissa.Location = new System.Drawing.Point(122, 439);
-            this.tbxGissa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbxGissa.MinimumSize = new System.Drawing.Size(60, 30);
+            this.tbxGissa.Location = new System.Drawing.Point(142, 434);
+            this.tbxGissa.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxGissa.MinimumSize = new System.Drawing.Size(60, 40);
             this.tbxGissa.Name = "tbxGissa";
-            this.tbxGissa.Size = new System.Drawing.Size(60, 30);
+            this.tbxGissa.Size = new System.Drawing.Size(60, 40);
             this.tbxGissa.TabIndex = 4;
             this.tbxGissa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxGissa.TextChanged += new System.EventHandler(this.tbxGissa_TextChanged);
             // 
-            // label3
+            // lblInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(125, 490);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Navy;
+            this.lblInfo.Location = new System.Drawing.Point(8, 482);
+            this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfo.MinimumSize = new System.Drawing.Size(300, 30);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(300, 30);
+            this.lblInfo.TabIndex = 5;
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbxGubbe
             // 
-            this.pbxGubbe.BackColor = System.Drawing.Color.Gold;
-            this.pbxGubbe.Location = new System.Drawing.Point(129, 84);
-            this.pbxGubbe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxGubbe.BackColor = System.Drawing.Color.Transparent;
+            this.pbxGubbe.Image = ((System.Drawing.Image)(resources.GetObject("pbxGubbe.Image")));
+            this.pbxGubbe.InitialImage = null;
+            this.pbxGubbe.Location = new System.Drawing.Point(122, 72);
+            this.pbxGubbe.Margin = new System.Windows.Forms.Padding(4);
             this.pbxGubbe.Name = "pbxGubbe";
-            this.pbxGubbe.Size = new System.Drawing.Size(53, 54);
+            this.pbxGubbe.Size = new System.Drawing.Size(80, 80);
+            this.pbxGubbe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxGubbe.TabIndex = 6;
             this.pbxGubbe.TabStop = false;
             // 
@@ -109,12 +118,13 @@
             this.tbxVisa.BackColor = System.Drawing.SystemColors.Control;
             this.tbxVisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxVisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxVisa.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbxVisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxVisa.Location = new System.Drawing.Point(12, 398);
             this.tbxVisa.MinimumSize = new System.Drawing.Size(300, 34);
             this.tbxVisa.Name = "tbxVisa";
-            this.tbxVisa.Size = new System.Drawing.Size(300, 34);
+            this.tbxVisa.Size = new System.Drawing.Size(300, 29);
             this.tbxVisa.TabIndex = 7;
+            this.tbxVisa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSlumpa
             // 
@@ -126,7 +136,7 @@
             this.btnSlumpa.Text = "Slumpa Svar!";
             this.btnSlumpa.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Spel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,15 +144,17 @@
             this.Controls.Add(this.btnSlumpa);
             this.Controls.Add(this.tbxVisa);
             this.Controls.Add(this.pbxGubbe);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.tbxGissa);
             this.Controls.Add(this.pbxMark);
             this.Controls.Add(this.mTbxSvar);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Spel";
+            this.Text = "Hänga gubbe | spel";
+            this.Load += new System.EventHandler(this.Spel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGubbe)).EndInit();
             this.ResumeLayout(false);
@@ -156,7 +168,7 @@
         private System.Windows.Forms.MaskedTextBox mTbxSvar;
         private System.Windows.Forms.PictureBox pbxMark;
         private System.Windows.Forms.TextBox tbxGissa;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.PictureBox pbxGubbe;
         private System.Windows.Forms.TextBox tbxVisa;
         private System.Windows.Forms.Button btnSlumpa;
