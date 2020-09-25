@@ -82,7 +82,7 @@
             this.tbxGissa.Margin = new System.Windows.Forms.Padding(4);
             this.tbxGissa.MinimumSize = new System.Drawing.Size(60, 40);
             this.tbxGissa.Name = "tbxGissa";
-            this.tbxGissa.Size = new System.Drawing.Size(60, 40);
+            this.tbxGissa.Size = new System.Drawing.Size(60, 21);
             this.tbxGissa.TabIndex = 4;
             this.tbxGissa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxGissa.TextChanged += new System.EventHandler(this.tbxGissa_TextChanged);
@@ -117,6 +117,7 @@
             // 
             this.tbxVisa.BackColor = System.Drawing.SystemColors.Control;
             this.tbxVisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxVisa.Enabled = false;
             this.tbxVisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxVisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxVisa.Location = new System.Drawing.Point(12, 398);
@@ -129,9 +130,9 @@
             // btnSlumpa
             // 
             this.btnSlumpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSlumpa.Location = new System.Drawing.Point(182, 30);
+            this.btnSlumpa.Location = new System.Drawing.Point(182, 12);
             this.btnSlumpa.Name = "btnSlumpa";
-            this.btnSlumpa.Size = new System.Drawing.Size(112, 23);
+            this.btnSlumpa.Size = new System.Drawing.Size(112, 41);
             this.btnSlumpa.TabIndex = 8;
             this.btnSlumpa.Text = "Slumpa Svar!";
             this.btnSlumpa.UseVisualStyleBackColor = true;

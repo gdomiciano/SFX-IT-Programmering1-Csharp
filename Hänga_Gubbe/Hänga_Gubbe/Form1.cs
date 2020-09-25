@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,61 +19,22 @@ namespace Hänga_Gubbe
             InitializeComponent();
         }
         public int fel = 5;
-        private void Spel_Load(object sender, EventArgs e)
+
+        public void återställaSpel()
         {
+            lblInfo.Text = "";
+            tbxVisa.Text = "";
+            mTbxSvar.Text = "";
+            pbxGubbe.Visible = false;
+            tbxGissa.Enabled = false;
+            mTbxSvar.Enabled = true;
             tbxGissa.Enabled = false;
             mTbxSvar.Focus();
         }
 
-        private void mTbxSvar_KeyUp(object sender, KeyEventArgs e)
+        private void Spel_Load(object sender, EventArgs e)
         {
-            if(mTbxSvar.Text.Length == 6)
-            {
-                mTbxSvar.Enabled = false;
-                tbxGissa.Enabled = true;
-                tbxGissa.Focus();
-                lblInfo.Text = "Gissa på en bokstav";
-                tbxVisa.Text = "??????";
-            }
-        }
-
-        private void tbxGissa_TextChanged(object sender, EventArgs e)
-        { 
-            if (tbxGissa.Text == "" ) return;
-
-            int index = mTbxSvar.Text.IndexOf(tbxGissa.Text); // index blir 3. 
-            Console.WriteLine(index);
-           if(index > -1)
-           {
-             string temp = tbxVisa.Text.Remove(index, 1);   // temp blir “?????” (fem frågetecken) 
-              tbxVisa.Text = temp.Insert(index, tbxGissa.Text);// visa blir ”???c??”. Ett ? har alltså bytts mot c.
-                
-           } else
-           {
-                flyttaGubbe();
-           }
-            
-            if (!tbxVisa.Text.Contains('?'))
-            {
-                // blir true (om visa är ”???c??”) ! visa.Contains( ’?’ ) // blir false. 
-                // show winned
-                MessageBox.Show("Du är vinner", "Förslagare");
-            }
-            tbxGissa.Text = "";
-        }
-
-        private void flyttaGubbe()
-        {
-            int offset = 40;
-            pbxGubbe.Top = pbxGubbe.Top + offset;
-
-                //"C:/Users/geisy/Projekter/SFX-IT-Programmering1-Csharp/Hänga_Gubbe/Hänga_Gubbe/bilder/" + --fel +".png"
-            pbxGubbe.Image = Image.FromFile("C:/Users/geisy/Projekter/SFX-IT-Programmering1-Csharp/Hänga_Gubbe/Hänga_Gubbe/bilder/" + --fel + ".png");
-
-            if(fel == 0)
-            {
-                MessageBox.Show("Du är inte vinner", "Förslagare");
-            }
+            återställaSpel();
         }
 
         private void pbxMark_Paint(object sender, PaintEventArgs e)
@@ -82,5 +44,83 @@ namespace Hänga_Gubbe
 
             g.FillRectangle(brush, -1, 290, 350, 50);
         }
+
+        private void mTbxSvar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(mTbxSvar.Text.Length == 6)
+            {
+                pbxGubbe.Visible = true;
+                mTbxSvar.Enabled = false;
+                tbxGissa.Enabled = true;
+                tbxGissa.Focus();
+                lblInfo.Text = "Gissa på en bokstav";
+                tbxVisa.Text = "??????";
+            }
+        }
+
+        private void tbxGissa_TextChanged(object sender, EventArgs e)
+        {
+            string gissining = tbxGissa.Text;
+
+           if (gissining == "" ) return;
+
+            if (mTbxSvar.Text.IndexOf(gissining) < 0) {
+                behandlaFelGissining();
+            } else {
+                behandlaRättGissining(gissining);
+            }
+
+           tbxGissa.Text = "";
+
+        }
+        private void behandlaRättGissining(string gissining) {
+            for (int i = 0; i < mTbxSvar.Text.Length; i++)
+            {
+                if ((mTbxSvar.Text[i]).ToString() == gissining)
+                {
+                    string temp = tbxVisa.Text.Remove(i, 1);
+                    tbxVisa.Text = temp.Insert(i, gissining);
+                    lblInfo.Text = "Bra gissining";
+                    lblInfo.ForeColor = Color.DarkGreen;
+                }
+            }
+
+            if (!tbxVisa.Text.Contains('?'))
+            {
+                visaResultat("Grattis!!!", "🏆 Du vann!!! \n Vill du spela igen?", true);
+            }
+        }
+        private void behandlaFelGissining()
+        {
+            lblInfo.Text = "Det finns " + fel + " chanser";
+            lblInfo.ForeColor = Color.DarkRed;
+            flyttaGubbe();
+            if (fel == 0)
+            {
+                visaResultat("Tyvärr", "😵 Du förlorade... \n Vill du spela igen?", false);
+            }
+        }
+        private void flyttaGubbe()
+        {
+            int offset = 40;
+            pbxGubbe.Top = pbxGubbe.Top + offset;
+            pbxGubbe.Image = Image.FromFile(Directory.GetCurrentDirectory()+"\\bilder\\" + --fel + ".ico");
+        }
+
+        public void visaResultat(string titel, string meddela, bool ärVinner) {
+            MessageBoxIcon beläte = ärVinner ? MessageBoxIcon.Information : MessageBoxIcon.Error;
+            DialogResult beslut = MessageBox.Show(meddela, titel, MessageBoxButtons.RetryCancel, beläte);
+
+            if (beslut == DialogResult.Retry)
+            {
+                återställaSpel();
+            }
+            else
+            {
+                this.Close();
+            }
+            
+        }
+
     }
 }
