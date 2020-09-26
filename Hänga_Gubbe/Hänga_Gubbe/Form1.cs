@@ -19,13 +19,13 @@ namespace Hänga_Gubbe
             InitializeComponent();
         }
        /// <summary>
-       /// Variabler ledig för hela programmet
+       /// Variabler är ledig för hela programmet
        /// </summary>
         public int fel = 5;
         public string bildMapp = Directory.GetCurrentDirectory() + "\\bilder\\";
 
         /// <summary>
-        /// Återställa elementens egenskaperna innan programmet har rätt ord
+        /// Återställa elementens egenskaper innan programmet har rätt ord
         /// </summary>
         public void ÅterställaSpel()
         {
@@ -45,7 +45,7 @@ namespace Hänga_Gubbe
             fel = 5;
         }
         /// <summary>
-        /// Aktivera elementens egenskaperna efter programmet har rätt ord
+        /// Aktivera elementens egenskaper efter programmet har rätt ord
         /// </summary>
         private void AktiveraSpel()
         {
@@ -86,7 +86,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// validera om spel är redo grundad på ordslängd
+        /// validera om spel är redo grundat på ordslängd
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -96,7 +96,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// Aktivera spel grundad på slumpmässigt skapade ord
+        /// Aktivera spel grundat på slumpmässigt skapade ord
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -132,7 +132,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        ///  Behandla rätt gissningar, visa info om gissning och om spelare har vannat visa resultat
+        ///  Behandla rätt gissningar, visa info om gissning och visa resultat om spelare har vunnit 
         /// </summary>
         /// <param name="gissning"></param>
         private void BehandlaRättgissning(string gissning) {
@@ -162,7 +162,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// Behandla rätt gissningar, visa info om gissning och om spelare har förlorat visa resultat
+        /// Behandla rätt gissningar, visa info om gissning och visa resultat om spelare har förlorat
         /// </summary>
         private void BehandlaFelgissning()
         {
@@ -185,7 +185,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// Flytta gubbes nere position om 40 och byta gubbes bild
+        /// Flytta gubbens nedre position om 40 och byta gubbens bild
         /// </summary>
         private void FlyttaGubbe()
         {
@@ -195,11 +195,11 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// Visa dialogrutan om man har vinnat eller förlorat
+        /// Visa dialogrutan om man har vunnit  eller förlorat
         /// </summary>
-        /// <param name="titel">titel visa som dialogrutan namn</param>
-        /// <param name="meddelande">meddelande visa som dialogrutans innehåll</param>
-        /// <param name="ärVinner">byta dialogsrutans ikonen, när det är sanna visa info ikonen annars visa fel ikonen </param>
+        /// <param name="titel">titel visas som dialogrutan namn</param>
+        /// <param name="meddelande">visa meddelande som dialogrutans innehåll </param>
+        /// <param name="ärVinner">byt dialogrutans ikon, när det är samma visa info ikonen annars visa fel ikon</param>
         public void VisaResultat(string titel, string meddelande, bool ärVinner) {
             MessageBoxIcon beläte = ärVinner ? MessageBoxIcon.Information : MessageBoxIcon.Error;
             DialogResult beslut = MessageBox.Show(meddelande, titel, MessageBoxButtons.RetryCancel, beläte);
