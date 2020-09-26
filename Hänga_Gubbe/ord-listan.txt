@@ -1,4 +1,5 @@
-["abnorm",
+[st
+"abnorm",
 "abrupt",
 "absurd",
 "accent",
