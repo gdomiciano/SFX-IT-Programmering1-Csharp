@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hänga_Gubbe</name>
+    </assembly>
+    <members>
+        <member name="F:Hänga_Gubbe.Spel.fel">
+            <summary>
+            Variabler ledig för hela programmet
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.ÅterställaSpel">
+            <summary>
+            Återställa elementens egenskaperna innan programmet har rätt ord
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.AktiveraSpel">
+            <summary>
+            Aktivera elementens egenskaperna efter programmet har rätt ord
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.Spel_Load(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.PbxMark_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Addera gräss till miljö
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.MTbxSvar_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            validera om spel är redo grundad på ordslängd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.BtnSlumpa_Click(System.Object,System.EventArgs)">
+            <summary>
+            Aktivera spel grundad på slumpmässigt skapade ord
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.TbxGissa_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            behandla alla gissningar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.BehandlaRättgissning(System.String)">
+            <summary>
+             Behandla rätt gissningar, visa info om gissning och om spelare har vannat visa resultat
+            </summary>
+            <param name="gissning"></param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.BehandlaFelgissning">
+            <summary>
+            Behandla rätt gissningar, visa info om gissning och om spelare har förlorat visa resultat
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.FlyttaGubbe">
+            <summary>
+            Flytta gubbes nere position om 40 och byta gubbes bild
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.VisaResultat(System.String,System.String,System.Boolean)">
+            <summary>
+            Visa dialogrutan om man har vinnat eller förlorat
+            </summary>
+            <param name="titel">titel visa som dialogrutan namn</param>
+            <param name="meddelande">meddelande visa som dialogrutans innehåll</param>
+            <param name="ärVinner">byta dialogsrutans ikonen, när det är sanna visa info ikonen annars visa fel ikonen </param>
+        </member>
+        <member name="F:Hänga_Gubbe.Spel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hänga_Gubbe.Spel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Hänga_Gubbe.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Hänga_Gubbe.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Hänga_Gubbe.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Hänga_Gubbe.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

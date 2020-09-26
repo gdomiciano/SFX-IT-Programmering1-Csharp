@@ -7,7 +7,7 @@ C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\Hänga_Gubbe.csproj.CoreCompileInputs.cache
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\Hänga_Gubbe.exe
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\Hänga_Gubbe.pdb
-C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\Hänga_Gubbe.csprojAssemblyReference.cache
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\bin\Debug\sv-SE\Hänga_Gubbe.resources.dll
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\Hänga_Gubbe.Spel.sv-SE.resources
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\obj\Debug\sv-SE\Hänga_Gubbe.resources.dll
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Hänga_Gubbe\Hänga_Gubbe\bin\Debug\Hänga_Gubbe.xml

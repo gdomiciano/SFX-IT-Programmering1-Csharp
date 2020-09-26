@@ -19,16 +19,19 @@ namespace Hänga_Gubbe
             InitializeComponent();
         }
        /// <summary>
-       /// @Fel 
+       /// Variabler ledig för hela programmet
        /// </summary>
         public int fel = 5;
+        public string bildMapp = Directory.GetCurrentDirectory() + "\\bilder\\";
 
         /// <summary>
-        /// 
+        /// Återställa elementens egenskaperna innan programmet har rätt ord
         /// </summary>
         public void ÅterställaSpel()
         {
             pbxGubbe.Visible = false;
+            pbxGubbe.Top = 72;
+            pbxGubbe.Image = Image.FromFile(bildMapp + "5.ico");
             pbxMark.Visible = false;
             tbxVisa.Visible = false;
             tbxGissa.Visible = false;
@@ -39,9 +42,10 @@ namespace Hänga_Gubbe
             mTbxSvar.Enabled = true;
             btnSlumpa.Enabled = true;
             mTbxSvar.Focus();
+            fel = 5;
         }
         /// <summary>
-        /// 
+        /// Aktivera elementens egenskaperna efter programmet har rätt ord
         /// </summary>
         private void AktiveraSpel()
         {
@@ -69,7 +73,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// 
+        /// Addera gräss till miljö
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -82,7 +86,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// 
+        /// validera om spel är redo grundad på ordslängd
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -92,7 +96,7 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// 
+        /// Aktivera spel grundad på slumpmässigt skapade ord
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -107,20 +111,20 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// 
+        /// behandla alla gissningar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TbxGissa_TextChanged(object sender, EventArgs e)
         {
-            string gissining = tbxGissa.Text;
+            string gissning = tbxGissa.Text;
 
-           if (gissining == "" ) return;
+           if (gissning == "" ) return;
 
-            if (mTbxSvar.Text.IndexOf(gissining) < 0) {
-                BehandlaFelGissining();
+            if (mTbxSvar.Text.IndexOf(gissning) < 0) {
+                BehandlaFelgissning();
             } else {
-                BehandlaRättGissining(gissining);
+                BehandlaRättgissning(gissning);
             }
 
            tbxGissa.Text = "";
@@ -128,28 +132,39 @@ namespace Hänga_Gubbe
         }
 
         /// <summary>
-        /// 
+        ///  Behandla rätt gissningar, visa info om gissning och om spelare har vannat visa resultat
         /// </summary>
-        /// <param name="gissining"></param>
-        private void BehandlaRättGissining(string gissining) {
-            string visaTexten = tbxVisa.Text;
-            for (int i = 0; i < mTbxSvar.Text.Length; i++)
+        /// <param name="gissning"></param>
+        private void BehandlaRättgissning(string gissning) {
+            if (tbxVisa.Text.Contains(gissning))
             {
-                if ((mTbxSvar.Text[i]).ToString() == gissining)
+                lblInfo.Text = "Du har gissat bokstaven '" + gissning + "' innan";
+
+            } else
+            {
+                for (int i = 0; i < mTbxSvar.Text.Length; i++)
                 {
-                    string temp = visaTexten.Remove(i, 1);
-                    tbxVisa.Text = temp.Insert(i, gissining);
-                    lblInfo.Text = visaTexten.Contains(gissining) ? "Du har gissat '" + gissining + "' innan" : "Bra gissining";
-                    lblInfo.ForeColor = Color.DarkGreen;
+                    if ((mTbxSvar.Text[i]).ToString() == gissning)
+                    {
+                        lblInfo.Text ="Bra gissning";
+                        string temp = tbxVisa.Text.Remove(i, 1);
+                        tbxVisa.Text = temp.Insert(i, gissning);
+                    }
                 }
             }
+            
+            lblInfo.ForeColor = Color.DarkGreen;
 
-            if (!visaTexten.Contains('?'))
+            if (!tbxVisa.Text.Contains('?'))
             {
                 VisaResultat("Grattis!!!", "🏆 Du vann!!! \n Vill du spela igen?", true);
             }
         }
-        private void BehandlaFelGissining()
+
+        /// <summary>
+        /// Behandla rätt gissningar, visa info om gissning och om spelare har förlorat visa resultat
+        /// </summary>
+        private void BehandlaFelgissning()
         {
 
             FlyttaGubbe();
@@ -168,13 +183,23 @@ namespace Hänga_Gubbe
             }
             lblInfo.ForeColor = Color.DarkRed;
         }
+
+        /// <summary>
+        /// Flytta gubbes nere position om 40 och byta gubbes bild
+        /// </summary>
         private void FlyttaGubbe()
         {
             int offset = 40;
             pbxGubbe.Top += offset;
-            pbxGubbe.Image = Image.FromFile(Directory.GetCurrentDirectory()+"\\bilder\\" + --fel + ".ico");
+            pbxGubbe.Image = Image.FromFile(bildMapp + --fel + ".ico");
         }
 
+        /// <summary>
+        /// Visa dialogrutan om man har vinnat eller förlorat
+        /// </summary>
+        /// <param name="titel">titel visa som dialogrutan namn</param>
+        /// <param name="meddelande">meddelande visa som dialogrutans innehåll</param>
+        /// <param name="ärVinner">byta dialogsrutans ikonen, när det är sanna visa info ikonen annars visa fel ikonen </param>
         public void VisaResultat(string titel, string meddelande, bool ärVinner) {
             MessageBoxIcon beläte = ärVinner ? MessageBoxIcon.Information : MessageBoxIcon.Error;
             DialogResult beslut = MessageBox.Show(meddelande, titel, MessageBoxButtons.RetryCancel, beläte);
