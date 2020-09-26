@@ -119,7 +119,7 @@ namespace Hänga_Gubbe
         {
             string gissning = tbxGissa.Text;
 
-           if (gissning == "" ) return;
+            if (gissning == "" ) return;
 
             if (mTbxSvar.Text.IndexOf(gissning) < 0) {
                 BehandlaFelgissning();
