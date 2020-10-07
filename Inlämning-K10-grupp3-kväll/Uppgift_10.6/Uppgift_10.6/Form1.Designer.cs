@@ -51,6 +51,7 @@
             this.tbxTal.Name = "tbxTal";
             this.tbxTal.Size = new System.Drawing.Size(100, 23);
             this.tbxTal.TabIndex = 1;
+            this.tbxTal.TextChanged += new System.EventHandler(this.tbxTal_TextChanged);
             // 
             // lblSvar
             // 
@@ -72,6 +73,7 @@
             this.btnVisa.TabIndex = 3;
             this.btnVisa.Text = "Visa";
             this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // Uppgift_10_6
             // 
