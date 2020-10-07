@@ -62,6 +62,7 @@
             this.tbxTal.Name = "tbxTal";
             this.tbxTal.Size = new System.Drawing.Size(100, 23);
             this.tbxTal.TabIndex = 2;
+            this.tbxTal.TextChanged += new System.EventHandler(this.tbxTal_TextChanged);
             // 
             // lblSvar
             // 
@@ -83,6 +84,7 @@
             this.btnVisa.TabIndex = 4;
             this.btnVisa.Text = "VisaTecken";
             this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // Uppgift_10_2
             // 
