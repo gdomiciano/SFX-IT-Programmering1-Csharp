@@ -41,6 +41,7 @@
             this.btnKasta.TabIndex = 0;
             this.btnKasta.Text = "Kasta tärningarna";
             this.btnKasta.UseVisualStyleBackColor = true;
+            this.btnKasta.Click += new System.EventHandler(this.btnKasta_Click);
             // 
             // tbxResultat
             // 
