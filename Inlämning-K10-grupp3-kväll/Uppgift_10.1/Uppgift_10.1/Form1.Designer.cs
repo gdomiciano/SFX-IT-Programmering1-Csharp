@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tbx = new System.Windows.Forms.TextBox();
+            this.tbxRadie = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSvar = new System.Windows.Forms.Label();
             this.btnBeräkna = new System.Windows.Forms.Button();
@@ -45,13 +45,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Radie: ";
             // 
-            // tbx
+            // tbxRadie
             // 
-            this.tbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx.Location = new System.Drawing.Point(83, 13);
-            this.tbx.Name = "tbx";
-            this.tbx.Size = new System.Drawing.Size(100, 23);
-            this.tbx.TabIndex = 1;
+            this.tbxRadie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxRadie.Location = new System.Drawing.Point(83, 13);
+            this.tbxRadie.Name = "tbxRadie";
+            this.tbxRadie.Size = new System.Drawing.Size(100, 23);
+            this.tbxRadie.TabIndex = 1;
+            this.tbxRadie.TextChanged += new System.EventHandler(this.tbxRadie_TextChanged);
             // 
             // label2
             // 
@@ -69,6 +70,7 @@
             this.lblSvar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSvar.Location = new System.Drawing.Point(83, 67);
+            this.lblSvar.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblSvar.MinimumSize = new System.Drawing.Size(100, 0);
             this.lblSvar.Name = "lblSvar";
             this.lblSvar.Size = new System.Drawing.Size(100, 19);
@@ -83,6 +85,7 @@
             this.btnBeräkna.TabIndex = 4;
             this.btnBeräkna.Text = "Beräkna omkrets";
             this.btnBeräkna.UseVisualStyleBackColor = true;
+            this.btnBeräkna.Click += new System.EventHandler(this.btnBeräkna_Click);
             // 
             // Uppgift_10_1
             // 
@@ -92,7 +95,7 @@
             this.Controls.Add(this.btnBeräkna);
             this.Controls.Add(this.lblSvar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbx);
+            this.Controls.Add(this.tbxRadie);
             this.Controls.Add(this.label1);
             this.Name = "Uppgift_10_1";
             this.Text = "Uppgift 10.1";
@@ -104,7 +107,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbx;
+        private System.Windows.Forms.TextBox tbxRadie;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSvar;
         private System.Windows.Forms.Button btnBeräkna;

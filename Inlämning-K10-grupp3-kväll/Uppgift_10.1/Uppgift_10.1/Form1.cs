@@ -16,9 +16,50 @@ namespace Uppgift_10._1
         {
             InitializeComponent();
         }
-        double omkretsCirkel (double radie)
-        {
 
+        private void btnBeräkna_Click(object sender, EventArgs e)
+        {
+            double radie = fåTal(tbxRadie.Text);
+            if (radie > 0) lblSvar.Text = omkretsCirkel(radie);
+        }
+
+        private string omkretsCirkel(double radie)
+        {
+            double diameter = radie * 2;
+            return (Math.PI * diameter).ToString();
+        }
+
+        private void tbxRadie_TextChanged(object sender, EventArgs e)
+        {
+            lblSvar.Text = "";
+        }
+
+        private double fåTal(string text)
+        {
+            try
+            {
+                return int.Parse(text);
+            }
+            catch (FormatException)
+            {
+                double nyttTalDouble;
+
+                if (text.Contains("."))
+                {
+                    string nyttTalText = text.Replace('.', ',');
+                    nyttTalDouble = double.Parse(nyttTalText);
+                    return nyttTalDouble;
+                }
+                else if (text.Contains(","))
+                {
+                    nyttTalDouble = double.Parse(text);
+                    return nyttTalDouble;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
         }
     }
 }
