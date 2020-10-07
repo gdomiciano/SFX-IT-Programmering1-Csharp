@@ -51,6 +51,7 @@
             this.txbTecken.Name = "txbTecken";
             this.txbTecken.Size = new System.Drawing.Size(100, 23);
             this.txbTecken.TabIndex = 1;
+            this.txbTecken.TextChanged += new System.EventHandler(this.txbTecken_TextChanged);
             // 
             // btnVisa
             // 
@@ -61,6 +62,7 @@
             this.btnVisa.TabIndex = 2;
             this.btnVisa.Text = "Visa Resultat";
             this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // lblSvar
             // 
