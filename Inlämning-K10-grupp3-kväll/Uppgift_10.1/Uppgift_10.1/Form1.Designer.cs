@@ -60,16 +60,16 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Omlrets: ";
+            this.label2.Text = "Omkrets: ";
             // 
             // lblSvar
             // 
             this.lblSvar.AutoSize = true;
             this.lblSvar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblSvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSvar.Location = new System.Drawing.Point(83, 67);
+            this.lblSvar.Location = new System.Drawing.Point(84, 65);
             this.lblSvar.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblSvar.MinimumSize = new System.Drawing.Size(100, 0);
             this.lblSvar.Name = "lblSvar";
@@ -79,7 +79,7 @@
             // btnBeräkna
             // 
             this.btnBeräkna.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBeräkna.Location = new System.Drawing.Point(16, 110);
+            this.btnBeräkna.Location = new System.Drawing.Point(17, 128);
             this.btnBeräkna.Name = "btnBeräkna";
             this.btnBeräkna.Size = new System.Drawing.Size(167, 23);
             this.btnBeräkna.TabIndex = 4;

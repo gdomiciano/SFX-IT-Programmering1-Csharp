@@ -20,13 +20,13 @@ namespace Uppgift_10._1
         private void btnBeräkna_Click(object sender, EventArgs e)
         {
             double radie = fåTal(tbxRadie.Text);
-            if (radie > 0) lblSvar.Text = omkretsCirkel(radie);
+            if (radie > 0) lblSvar.Text = omkretsCirkel(radie).ToString();
         }
 
-        private string omkretsCirkel(double radie)
+        private double omkretsCirkel(double radie)
         {
             double diameter = radie * 2;
-            return (Math.PI * diameter).ToString();
+            return Math.PI * diameter;
         }
 
         private void tbxRadie_TextChanged(object sender, EventArgs e)
