@@ -1,0 +1,10 @@
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10.8.csprojAssemblyReference.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10._8.Uppgift_10_8.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10._8.Properties.Resources.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10.8.csproj.GenerateResource.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10.8.csproj.CoreCompileInputs.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\bin\Debug\Uppgift_10.8.exe.config
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\bin\Debug\Uppgift_10.8.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\bin\Debug\Uppgift_10.8.pdb
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10.8.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K10-grupp3-kväll\Uppgift_10.8\Uppgift_10.8\obj\Debug\Uppgift_10.8.pdb
