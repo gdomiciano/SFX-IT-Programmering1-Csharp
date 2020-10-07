@@ -62,6 +62,7 @@
             this.tbxGemen.Name = "tbxGemen";
             this.tbxGemen.Size = new System.Drawing.Size(100, 23);
             this.tbxGemen.TabIndex = 2;
+            this.tbxGemen.TextChanged += new System.EventHandler(this.tbxGemen_TextChanged);
             // 
             // lblVerssal
             // 
@@ -83,6 +84,7 @@
             this.btnVisa.TabIndex = 4;
             this.btnVisa.Text = "VIsa versal";
             this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // Uppgift_10_5
             // 

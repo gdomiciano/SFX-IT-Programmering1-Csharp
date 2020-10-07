@@ -16,5 +16,20 @@ namespace Uppgift_10._5
         {
             InitializeComponent();
         }
+
+        private void tbxGemen_TextChanged(object sender, EventArgs e)
+        {
+            lblVerssal.Text = "";
+        }
+
+        private void btnVisa_Click(object sender, EventArgs e)
+        {
+            lblVerssal.Text = geVersal(tbxGemen.Text);
+        }
+
+        private string geVersal(string bokstav)
+        {
+            return bokstav.ToUpper();
+        }
     }
 }
