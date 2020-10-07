@@ -16,5 +16,19 @@ namespace Uppgift_10._7
         {
             InitializeComponent();
         }
+
+        private void btnBeräkna_Click(object sender, EventArgs e)
+        {
+            int bas = int.Parse(tbxBas.Text);
+            int exponent = int.Parse(tbxExponent.Text);
+
+            int potensResultat = potens(bas, exponent);
+            lblSvar.Text = bas + " uppphöjt till " + exponent + " är " + potensResultat; 
+        }
+
+        private int potens(int bas, int exponent)
+        {
+            return int.Parse(Math.Pow(bas, exponent).ToString());
+        }
     }
 }

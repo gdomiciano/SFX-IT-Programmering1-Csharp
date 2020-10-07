@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxBas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxExponent = new System.Windows.Forms.TextBox();
             this.lblSvar = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnBeräkna = new System.Windows.Forms.Button();
@@ -48,13 +48,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bas:";
             // 
-            // textBox1
+            // tbxBas
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(55, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(35, 23);
-            this.textBox1.TabIndex = 1;
+            this.tbxBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxBas.Location = new System.Drawing.Point(55, 10);
+            this.tbxBas.Name = "tbxBas";
+            this.tbxBas.Size = new System.Drawing.Size(35, 23);
+            this.tbxBas.TabIndex = 1;
             // 
             // label2
             // 
@@ -66,13 +66,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Exponent:";
             // 
-            // textBox2
+            // tbxExponent
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(41, 23);
-            this.textBox2.TabIndex = 3;
+            this.tbxExponent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxExponent.Location = new System.Drawing.Point(216, 10);
+            this.tbxExponent.Name = "tbxExponent";
+            this.tbxExponent.Size = new System.Drawing.Size(41, 23);
+            this.tbxExponent.TabIndex = 3;
             // 
             // lblSvar
             // 
@@ -88,23 +88,24 @@
             // btnBeräkna
             // 
             this.btnBeräkna.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBeräkna.Location = new System.Drawing.Point(104, 93);
+            this.btnBeräkna.Location = new System.Drawing.Point(94, 97);
             this.btnBeräkna.Name = "btnBeräkna";
             this.btnBeräkna.Size = new System.Drawing.Size(75, 23);
             this.btnBeräkna.TabIndex = 5;
             this.btnBeräkna.Text = "Beräkna";
             this.btnBeräkna.UseVisualStyleBackColor = true;
+            this.btnBeräkna.Click += new System.EventHandler(this.btnBeräkna_Click);
             // 
             // Uppgift_10_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 158);
+            this.ClientSize = new System.Drawing.Size(269, 132);
             this.Controls.Add(this.btnBeräkna);
             this.Controls.Add(this.lblSvar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbxExponent);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxBas);
             this.Controls.Add(this.label1);
             this.Name = "Uppgift_10_7";
             this.Text = "Uppgift 10.7";
@@ -116,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxBas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxExponent;
         private System.Windows.Forms.Label lblSvar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnBeräkna;
