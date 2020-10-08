@@ -42,6 +42,7 @@
             this.btnRita.TabIndex = 5;
             this.btnRita.Text = "Rita";
             this.btnRita.UseVisualStyleBackColor = true;
+            this.btnRita.Click += new System.EventHandler(this.btnRita_Click);
             // 
             // tbxAntal
             // 
@@ -50,6 +51,7 @@
             this.tbxAntal.Name = "tbxAntal";
             this.tbxAntal.Size = new System.Drawing.Size(100, 23);
             this.tbxAntal.TabIndex = 4;
+            this.tbxAntal.TextChanged += new System.EventHandler(this.tbxAntal_TextChanged);
             // 
             // label1
             // 
