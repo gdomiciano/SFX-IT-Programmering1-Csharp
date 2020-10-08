@@ -50,6 +50,7 @@
             this.tbxAntal.Name = "tbxAntal";
             this.tbxAntal.Size = new System.Drawing.Size(100, 23);
             this.tbxAntal.TabIndex = 1;
+            this.tbxAntal.TextChanged += new System.EventHandler(this.tbxAntal_TextChanged);
             // 
             // btnRita
             // 
@@ -60,12 +61,13 @@
             this.btnRita.TabIndex = 2;
             this.btnRita.Text = "Rita";
             this.btnRita.UseVisualStyleBackColor = true;
+            this.btnRita.Click += new System.EventHandler(this.btnRita_Click);
             // 
             // Uppgift_10_4_a
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 261);
+            this.ClientSize = new System.Drawing.Size(984, 138);
             this.Controls.Add(this.btnRita);
             this.Controls.Add(this.tbxAntal);
             this.Controls.Add(this.label1);
