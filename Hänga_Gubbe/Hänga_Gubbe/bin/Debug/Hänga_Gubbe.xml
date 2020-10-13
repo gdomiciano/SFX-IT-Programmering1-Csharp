@@ -6,17 +6,17 @@
     <members>
         <member name="F:Hänga_Gubbe.Spel.fel">
             <summary>
-            Variabler ledig för hela programmet
+            Variabler är ledig för hela programmet
             </summary>
         </member>
         <member name="M:Hänga_Gubbe.Spel.ÅterställaSpel">
             <summary>
-            Återställa elementens egenskaperna innan programmet har rätt ord
+            Återställa elementens egenskaper innan programmet har rätt ord
             </summary>
         </member>
         <member name="M:Hänga_Gubbe.Spel.AktiveraSpel">
             <summary>
-            Aktivera elementens egenskaperna efter programmet har rätt ord
+            Aktivera elementens egenskaper efter programmet har rätt ord
             </summary>
         </member>
         <member name="M:Hänga_Gubbe.Spel.Spel_Load(System.Object,System.EventArgs)">
@@ -35,14 +35,14 @@
         </member>
         <member name="M:Hänga_Gubbe.Spel.MTbxSvar_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
             <summary>
-            validera om spel är redo grundad på ordslängd
+            validera om spel är redo grundat på ordslängd
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
         <member name="M:Hänga_Gubbe.Spel.BtnSlumpa_Click(System.Object,System.EventArgs)">
             <summary>
-            Aktivera spel grundad på slumpmässigt skapade ord
+            Aktivera spel grundat på slumpmässigt skapade ord
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -56,27 +56,27 @@
         </member>
         <member name="M:Hänga_Gubbe.Spel.BehandlaRättgissning(System.String)">
             <summary>
-             Behandla rätt gissningar, visa info om gissning och om spelare har vannat visa resultat
+             Behandla rätt gissningar, visa info om gissning och visa resultat om spelare har vunnit 
             </summary>
             <param name="gissning"></param>
         </member>
         <member name="M:Hänga_Gubbe.Spel.BehandlaFelgissning">
             <summary>
-            Behandla rätt gissningar, visa info om gissning och om spelare har förlorat visa resultat
+            Behandla rätt gissningar, visa info om gissning och visa resultat om spelare har förlorat
             </summary>
         </member>
         <member name="M:Hänga_Gubbe.Spel.FlyttaGubbe">
             <summary>
-            Flytta gubbes nere position om 40 och byta gubbes bild
+            Flytta gubbens nedre position om 40 och byta gubbens bild
             </summary>
         </member>
         <member name="M:Hänga_Gubbe.Spel.VisaResultat(System.String,System.String,System.Boolean)">
             <summary>
-            Visa dialogrutan om man har vinnat eller förlorat
+            Visa dialogrutan om man har vunnit  eller förlorat
             </summary>
-            <param name="titel">titel visa som dialogrutan namn</param>
-            <param name="meddelande">meddelande visa som dialogrutans innehåll</param>
-            <param name="ärVinner">byta dialogsrutans ikonen, när det är sanna visa info ikonen annars visa fel ikonen </param>
+            <param name="titel">titel visas som dialogrutan namn</param>
+            <param name="meddelande">visa meddelande som dialogrutans innehåll </param>
+            <param name="ärVinner">byt dialogrutans ikon, när det är samma visa info ikonen annars visa fel ikon</param>
         </member>
         <member name="F:Hänga_Gubbe.Spel.components">
             <summary>
