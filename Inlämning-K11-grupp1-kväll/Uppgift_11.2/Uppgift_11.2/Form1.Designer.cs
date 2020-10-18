@@ -115,15 +115,18 @@
             this.btnLäggtill.TabIndex = 4;
             this.btnLäggtill.Text = "Lägg till";
             this.btnLäggtill.UseVisualStyleBackColor = true;
+            this.btnLäggtill.Click += new System.EventHandler(this.btnLäggtill_Click);
             // 
             // rBtnFörnamn
             // 
             this.rBtnFörnamn.AutoSize = true;
+            this.rBtnFörnamn.Checked = true;
             this.rBtnFörnamn.Location = new System.Drawing.Point(27, 412);
             this.rBtnFörnamn.Name = "rBtnFörnamn";
             this.rBtnFörnamn.Size = new System.Drawing.Size(121, 21);
             this.rBtnFörnamn.TabIndex = 5;
             this.rBtnFörnamn.TabStop = true;
+            this.rBtnFörnamn.Tag = "visaEfter";
             this.rBtnFörnamn.Text = "Förnamn Först";
             this.rBtnFörnamn.UseVisualStyleBackColor = true;
             // 
@@ -134,7 +137,7 @@
             this.rBtnEfternamn.Name = "rBtnEfternamn";
             this.rBtnEfternamn.Size = new System.Drawing.Size(130, 21);
             this.rBtnEfternamn.TabIndex = 6;
-            this.rBtnEfternamn.TabStop = true;
+            this.rBtnEfternamn.Tag = "visaEfter";
             this.rBtnEfternamn.Text = "Efternamn Först";
             this.rBtnEfternamn.UseVisualStyleBackColor = true;
             // 
