@@ -103,6 +103,7 @@
             this.tbxLista.Location = new System.Drawing.Point(27, 149);
             this.tbxLista.Multiline = true;
             this.tbxLista.Name = "tbxLista";
+            this.tbxLista.ReadOnly = true;
             this.tbxLista.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxLista.Size = new System.Drawing.Size(761, 235);
             this.tbxLista.TabIndex = 7;
@@ -129,6 +130,7 @@
             this.rBtnFörnamn.Tag = "visaEfter";
             this.rBtnFörnamn.Text = "Förnamn Först";
             this.rBtnFörnamn.UseVisualStyleBackColor = true;
+            this.rBtnFörnamn.CheckedChanged += new System.EventHandler(this.sorteraEfter);
             // 
             // rBtnEfternamn
             // 
@@ -140,6 +142,7 @@
             this.rBtnEfternamn.Tag = "visaEfter";
             this.rBtnEfternamn.Text = "Efternamn Först";
             this.rBtnEfternamn.UseVisualStyleBackColor = true;
+            this.rBtnEfternamn.CheckedChanged += new System.EventHandler(this.sorteraEfter);
             // 
             // Kontaker
             // 

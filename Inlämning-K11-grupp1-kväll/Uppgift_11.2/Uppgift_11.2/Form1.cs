@@ -30,21 +30,21 @@ namespace Uppgift_11._2
             tbxEfternamn.Clear();
             tbxTelefon.Clear();
 
-            visaKontakter();
+            visaKontakter(räknare);
 
             räknare++;
             
-            if(räknare == 2)
+            if (räknare == 99)
             {
                 inaktiveraFormulär();
             }
         }
 
-        private void visaKontakter()
+        private void visaKontakter(int index)
         {
-            string förnamn = kontakter[räknare].förnamn;
-            string efternamn = kontakter[räknare].efternamn;
-            string telefonnummer = kontakter[räknare].telefonnummer;
+            string förnamn = kontakter[index].förnamn;
+            string efternamn = kontakter[index].efternamn;
+            string telefonnummer = kontakter[index].telefonnummer;
 
             string text = rBtnEfternamn.Checked
                     ? efternamn + "\t" + förnamn
@@ -56,7 +56,7 @@ namespace Uppgift_11._2
 
         }
 
-        void adderaKontakt(Kontakt kontakt)
+        private void adderaKontakt(Kontakt kontakt)
         {
             kontakter[räknare] = kontakt;
         }
@@ -68,5 +68,24 @@ namespace Uppgift_11._2
             tbxTelefon.Enabled = false;
             btnLäggtill.Enabled = false;
         }
+
+        private void sorteraEfter(object sender, EventArgs e)
+        {
+            tbxLista.Clear();
+
+            for (int i = 0; i < kontakter.Length; i++)
+            {
+                if(kontakter[i] != null)
+                {
+                    visaKontakter(i);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+
     }
 }
