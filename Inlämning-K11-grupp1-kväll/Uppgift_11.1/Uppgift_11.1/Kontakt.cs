@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Uppgift_11._1
 {
-    public class Kontakt
+    class Kontakt
     {
+        // engenskap (?)
         public string förnamn { get; set; }
         public string efternamn { get; set; }
         public string telefonnummer { get; set; }

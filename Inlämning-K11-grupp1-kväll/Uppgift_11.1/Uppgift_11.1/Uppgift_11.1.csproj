@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21AB7563-4734-48ED-8A9C-D7B70CE135DA}</ProjectGuid>
+    <ProjectGuid>{A8B17286-FA2F-4BD7-ADC8-2E51A119FA5E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Uppgift_11._1</RootNamespace>
     <AssemblyName>Uppgift_11.1</AssemblyName>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kontakt.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

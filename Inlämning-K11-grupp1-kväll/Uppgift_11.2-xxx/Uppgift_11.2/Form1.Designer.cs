@@ -1,4 +1,4 @@
-﻿namespace Uppgift_11._1
+﻿namespace Uppgift_11._2
 {
     partial class Form1
     {
@@ -94,6 +94,7 @@
             this.btnLägg.TabIndex = 7;
             this.btnLägg.Text = "button1";
             this.btnLägg.UseVisualStyleBackColor = true;
+            this.btnLägg.Click += new System.EventHandler(this.btnLägg_Click);
             // 
             // tbxKontakter
             // 
@@ -119,7 +120,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
