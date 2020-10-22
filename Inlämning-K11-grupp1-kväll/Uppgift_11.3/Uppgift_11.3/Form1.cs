@@ -33,37 +33,62 @@ namespace Uppgift_11._3
             if (rBtnRuta.Checked) ruta?.Rita(e.Graphics); 
            
         }
-        
+        private void formChecka(object sender, EventArgs e) {
+
+            tbxRadius.Enabled = false;
+            tbxRadius.Clear();
+            tbxSida.Enabled = false;
+            tbxSida.Clear();
+            tbxHöjd.Enabled = false;
+            tbxHöjd.Clear();
+            tbxBredd.Enabled = false;
+            tbxBredd.Clear();
+            lblSvar.Text = "";
+
+            if (rBtnCirkel.Checked)
+            {
+                tbxRadius.Enabled = true;
+            }
+            else if (rBtnRektangel.Checked)
+            {
+                tbxHöjd.Enabled = true;
+                tbxBredd.Enabled = true;
+            }
+            else if (rBtnRuta.Checked)
+            {
+                tbxSida.Enabled = true;
+            }
+        }
         private void btnRita_Click(object sender, EventArgs e)
+
         {
+            try
+            {
+                if(rBtnCirkel.Checked)
+                {
+                    cirkel = new Cirkel(int.Parse(tbxRadius.Text));
+                    Invalidate();
+                    lblSvar.Text = "Arean för cirkeln är: " + cirkel.FåArean();
+                } else if (rBtnRektangel.Checked)
+                {
+                    rektangel = new Rektangel(int.Parse(tbxHöjd.Text), int.Parse(tbxBredd.Text));
+                    Invalidate();
+                    lblSvar.Text = "Arean för rektangeln är: " + rektangel.FåArean();
 
-            if(rBtnCirkel.Checked)
-            {
-                cirkel = new Cirkel(int.Parse(tbxRadius.Text));
-                Invalidate();
-                lblSvar.Text = "Arean för cirkel är" + cirkel.FåArean();
-            } else if (rBtnRektangel.Checked)
-            {
-                rektangel = new Rektangel(int.Parse(tbxHöjd.Text), int.Parse(tbxBredd.Text));
-                Invalidate();
-                lblSvar.Text = "Arean för rektangel är" + rektangel.FåArean();
-
-            } else if (rBtnRuta.Checked)
-            {
+                } else if (rBtnRuta.Checked)
+                {
                 
-                ruta = new Rektangel(int.Parse(tbxSida.Text), int.Parse(tbxSida.Text));
-                Invalidate();
-                lblSvar.Text = "Arean för rektangel är" + ruta.FåArean();
+                    ruta = new Rektangel(int.Parse(tbxSida.Text), int.Parse(tbxSida.Text));
+                    Invalidate();
+                    lblSvar.Text = "Arean för rutan är: " + ruta.FåArean();
+
+                }
 
             }
-            else
+            catch (FormatException)
             {
                 lblSvar.Text = "Det var en fel val, försok igen!";
             }
-            // vilken ska rita
-            // skapa klasse
-            // anropa metoder för att rita
-            // visa arean 
         }
     }
 }

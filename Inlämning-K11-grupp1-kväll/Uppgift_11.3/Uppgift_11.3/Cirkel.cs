@@ -18,7 +18,7 @@ namespace Uppgift_11._3
 
         public void Rita(Graphics g)
         {
-            g.DrawEllipse(new Pen(Color.Red), 200, 100, radius, radius);
+            g.DrawEllipse(new Pen(Color.Red), 200, 30, radius, radius);
         }
 
         public double FåArean()

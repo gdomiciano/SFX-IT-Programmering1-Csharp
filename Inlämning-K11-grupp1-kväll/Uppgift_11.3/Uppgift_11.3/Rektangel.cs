@@ -21,7 +21,7 @@ namespace Uppgift_11._3
 
         public void Rita(Graphics g)
         {
-            g.DrawRectangle( new Pen (Color.Red), 200, 100, höjd, bredd);
+            g.DrawRectangle( new Pen (Color.Red), 200, 30, höjd, bredd);
         }
 
         public int FåArean()
