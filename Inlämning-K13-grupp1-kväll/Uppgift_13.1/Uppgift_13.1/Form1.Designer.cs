@@ -160,6 +160,7 @@
             this.btnLäggTill.TabIndex = 4;
             this.btnLäggTill.Text = "Lägg till glossa";
             this.btnLäggTill.UseVisualStyleBackColor = true;
+            this.btnLäggTill.Click += new System.EventHandler(this.btnLäggTill_Click);
             // 
             // btnSvara
             // 

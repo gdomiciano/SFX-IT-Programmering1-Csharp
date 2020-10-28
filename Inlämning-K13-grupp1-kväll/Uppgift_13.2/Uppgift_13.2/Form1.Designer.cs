@@ -1,6 +1,6 @@
 ﻿namespace Uppgift_13._2
 {
-    partial class Form1
+    partial class Uppgift_13_2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxParentesFöljd = new System.Windows.Forms.TextBox();
+            this.lblResultat = new System.Windows.Forms.Label();
+            this.btnKontrolera = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Parentesföljd:";
+            // 
+            // tbxParentesFöljd
+            // 
+            this.tbxParentesFöljd.Location = new System.Drawing.Point(128, 23);
+            this.tbxParentesFöljd.Name = "tbxParentesFöljd";
+            this.tbxParentesFöljd.Size = new System.Drawing.Size(142, 22);
+            this.tbxParentesFöljd.TabIndex = 1;
+            // 
+            // lblResultat
+            // 
+            this.lblResultat.AutoSize = true;
+            this.lblResultat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblResultat.Location = new System.Drawing.Point(21, 64);
+            this.lblResultat.MinimumSize = new System.Drawing.Size(250, 20);
+            this.lblResultat.Name = "lblResultat";
+            this.lblResultat.Size = new System.Drawing.Size(250, 20);
+            this.lblResultat.TabIndex = 2;
+            // 
+            // btnKontrolera
+            // 
+            this.btnKontrolera.Location = new System.Drawing.Point(90, 107);
+            this.btnKontrolera.Name = "btnKontrolera";
+            this.btnKontrolera.Size = new System.Drawing.Size(106, 30);
+            this.btnKontrolera.TabIndex = 3;
+            this.btnKontrolera.Text = "Kontrolera";
+            this.btnKontrolera.UseVisualStyleBackColor = true;
+            // 
+            // Uppgift_13_2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(297, 149);
+            this.Controls.Add(this.btnKontrolera);
+            this.Controls.Add(this.lblResultat);
+            this.Controls.Add(this.tbxParentesFöljd);
+            this.Controls.Add(this.label1);
+            this.Name = "Uppgift_13_2";
+            this.Text = "Uppgift";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxParentesFöljd;
+        private System.Windows.Forms.Label lblResultat;
+        private System.Windows.Forms.Button btnKontrolera;
     }
 }
 
