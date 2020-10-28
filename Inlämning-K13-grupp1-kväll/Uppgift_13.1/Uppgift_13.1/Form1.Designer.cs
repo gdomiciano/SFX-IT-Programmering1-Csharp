@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.gbxLäggtill = new System.Windows.Forms.GroupBox();
-            this.gbxGlostest = new System.Windows.Forms.GroupBox();
-            this.gbxResultat = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbxLäggTillSvenskt = new System.Windows.Forms.TextBox();
-            this.tbxLäggTillEngelskt = new System.Windows.Forms.TextBox();
-            this.tbxGlostestSvenskt = new System.Windows.Forms.TextBox();
-            this.tbxGlostestEngelskt = new System.Windows.Forms.TextBox();
             this.btnLäggTill = new System.Windows.Forms.Button();
+            this.tbxLäggTillEngelskt = new System.Windows.Forms.TextBox();
+            this.tbxLäggTillSvenskt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gbxGlostest = new System.Windows.Forms.GroupBox();
             this.btnSvara = new System.Windows.Forms.Button();
+            this.tbxGlostestEngelskt = new System.Windows.Forms.TextBox();
+            this.tbxGlostestSvenskt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbxResultat = new System.Windows.Forms.GroupBox();
+            this.lblResultat = new System.Windows.Forms.Label();
             this.btnStartaGlostest = new System.Windows.Forms.Button();
             this.btnNyaGlosor = new System.Windows.Forms.Button();
-            this.lblResultat = new System.Windows.Forms.Label();
             this.gbxLäggtill.SuspendLayout();
             this.gbxGlostest.SuspendLayout();
             this.gbxResultat.SuspendLayout();
@@ -63,6 +63,48 @@
             this.gbxLäggtill.TabStop = false;
             this.gbxLäggtill.Text = "Lägg till glosor";
             // 
+            // btnLäggTill
+            // 
+            this.btnLäggTill.Location = new System.Drawing.Point(19, 124);
+            this.btnLäggTill.Name = "btnLäggTill";
+            this.btnLäggTill.Size = new System.Drawing.Size(217, 30);
+            this.btnLäggTill.TabIndex = 4;
+            this.btnLäggTill.Text = "Lägg till glossa";
+            this.btnLäggTill.UseVisualStyleBackColor = true;
+            this.btnLäggTill.Click += new System.EventHandler(this.btnLäggTill_Click);
+            // 
+            // tbxLäggTillEngelskt
+            // 
+            this.tbxLäggTillEngelskt.Location = new System.Drawing.Point(136, 75);
+            this.tbxLäggTillEngelskt.Name = "tbxLäggTillEngelskt";
+            this.tbxLäggTillEngelskt.Size = new System.Drawing.Size(100, 22);
+            this.tbxLäggTillEngelskt.TabIndex = 3;
+            // 
+            // tbxLäggTillSvenskt
+            // 
+            this.tbxLäggTillSvenskt.Location = new System.Drawing.Point(136, 34);
+            this.tbxLäggTillSvenskt.Name = "tbxLäggTillSvenskt";
+            this.tbxLäggTillSvenskt.Size = new System.Drawing.Size(100, 22);
+            this.tbxLäggTillSvenskt.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Engelskt ord:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Svenskt ord:";
+            // 
             // gbxGlostest
             // 
             this.gbxGlostest.Controls.Add(this.btnSvara);
@@ -70,12 +112,56 @@
             this.gbxGlostest.Controls.Add(this.tbxGlostestSvenskt);
             this.gbxGlostest.Controls.Add(this.label4);
             this.gbxGlostest.Controls.Add(this.label3);
+            this.gbxGlostest.Enabled = false;
             this.gbxGlostest.Location = new System.Drawing.Point(13, 214);
             this.gbxGlostest.Name = "gbxGlostest";
             this.gbxGlostest.Size = new System.Drawing.Size(266, 164);
             this.gbxGlostest.TabIndex = 1;
             this.gbxGlostest.TabStop = false;
             this.gbxGlostest.Text = "Glostest";
+            this.gbxGlostest.EnabledChanged += new System.EventHandler(this.gbxGlostest_EnabledChanged);
+            // 
+            // btnSvara
+            // 
+            this.btnSvara.Location = new System.Drawing.Point(19, 115);
+            this.btnSvara.Name = "btnSvara";
+            this.btnSvara.Size = new System.Drawing.Size(217, 28);
+            this.btnSvara.TabIndex = 4;
+            this.btnSvara.Text = "Svara";
+            this.btnSvara.UseVisualStyleBackColor = true;
+            this.btnSvara.Click += new System.EventHandler(this.btnSvara_Click);
+            // 
+            // tbxGlostestEngelskt
+            // 
+            this.tbxGlostestEngelskt.Location = new System.Drawing.Point(136, 70);
+            this.tbxGlostestEngelskt.Name = "tbxGlostestEngelskt";
+            this.tbxGlostestEngelskt.Size = new System.Drawing.Size(100, 22);
+            this.tbxGlostestEngelskt.TabIndex = 3;
+            // 
+            // tbxGlostestSvenskt
+            // 
+            this.tbxGlostestSvenskt.Location = new System.Drawing.Point(136, 27);
+            this.tbxGlostestSvenskt.Name = "tbxGlostestSvenskt";
+            this.tbxGlostestSvenskt.Size = new System.Drawing.Size(100, 22);
+            this.tbxGlostestSvenskt.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Engelskt ord:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Svenskt ord:";
             // 
             // gbxResultat
             // 
@@ -88,88 +174,14 @@
             this.gbxResultat.TabStop = false;
             this.gbxResultat.Text = "Resultat";
             // 
-            // label1
+            // lblResultat
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Svenskt ord:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Engelskt ord:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Svenskt ord:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Engelskt ord:";
-            // 
-            // tbxLäggTillSvenskt
-            // 
-            this.tbxLäggTillSvenskt.Location = new System.Drawing.Point(136, 34);
-            this.tbxLäggTillSvenskt.Name = "tbxLäggTillSvenskt";
-            this.tbxLäggTillSvenskt.Size = new System.Drawing.Size(100, 22);
-            this.tbxLäggTillSvenskt.TabIndex = 2;
-            // 
-            // tbxLäggTillEngelskt
-            // 
-            this.tbxLäggTillEngelskt.Location = new System.Drawing.Point(136, 75);
-            this.tbxLäggTillEngelskt.Name = "tbxLäggTillEngelskt";
-            this.tbxLäggTillEngelskt.Size = new System.Drawing.Size(100, 22);
-            this.tbxLäggTillEngelskt.TabIndex = 3;
-            // 
-            // tbxGlostestSvenskt
-            // 
-            this.tbxGlostestSvenskt.Location = new System.Drawing.Point(136, 27);
-            this.tbxGlostestSvenskt.Name = "tbxGlostestSvenskt";
-            this.tbxGlostestSvenskt.Size = new System.Drawing.Size(100, 22);
-            this.tbxGlostestSvenskt.TabIndex = 2;
-            // 
-            // tbxGlostestEngelskt
-            // 
-            this.tbxGlostestEngelskt.Location = new System.Drawing.Point(136, 70);
-            this.tbxGlostestEngelskt.Name = "tbxGlostestEngelskt";
-            this.tbxGlostestEngelskt.Size = new System.Drawing.Size(100, 22);
-            this.tbxGlostestEngelskt.TabIndex = 3;
-            // 
-            // btnLäggTill
-            // 
-            this.btnLäggTill.Location = new System.Drawing.Point(19, 124);
-            this.btnLäggTill.Name = "btnLäggTill";
-            this.btnLäggTill.Size = new System.Drawing.Size(217, 30);
-            this.btnLäggTill.TabIndex = 4;
-            this.btnLäggTill.Text = "Lägg till glossa";
-            this.btnLäggTill.UseVisualStyleBackColor = true;
-            this.btnLäggTill.Click += new System.EventHandler(this.btnLäggTill_Click);
-            // 
-            // btnSvara
-            // 
-            this.btnSvara.Location = new System.Drawing.Point(19, 115);
-            this.btnSvara.Name = "btnSvara";
-            this.btnSvara.Size = new System.Drawing.Size(217, 28);
-            this.btnSvara.TabIndex = 4;
-            this.btnSvara.Text = "Svara";
-            this.btnSvara.UseVisualStyleBackColor = true;
+            this.lblResultat.AutoSize = true;
+            this.lblResultat.Location = new System.Drawing.Point(8, 34);
+            this.lblResultat.MaximumSize = new System.Drawing.Size(180, 0);
+            this.lblResultat.Name = "lblResultat";
+            this.lblResultat.Size = new System.Drawing.Size(0, 17);
+            this.lblResultat.TabIndex = 0;
             // 
             // btnStartaGlostest
             // 
@@ -179,6 +191,7 @@
             this.btnStartaGlostest.TabIndex = 3;
             this.btnStartaGlostest.Text = "Starta Glostest";
             this.btnStartaGlostest.UseVisualStyleBackColor = true;
+            this.btnStartaGlostest.Click += new System.EventHandler(this.btnStartaGlostest_Click);
             // 
             // btnNyaGlosor
             // 
@@ -188,15 +201,7 @@
             this.btnNyaGlosor.TabIndex = 4;
             this.btnNyaGlosor.Text = "Nya glosor";
             this.btnNyaGlosor.UseVisualStyleBackColor = true;
-            // 
-            // lblResultat
-            // 
-            this.lblResultat.AutoSize = true;
-            this.lblResultat.Location = new System.Drawing.Point(8, 34);
-            this.lblResultat.MaximumSize = new System.Drawing.Size(180, 0);
-            this.lblResultat.Name = "lblResultat";
-            this.lblResultat.Size = new System.Drawing.Size(0, 17);
-            this.lblResultat.TabIndex = 0;
+            this.btnNyaGlosor.Click += new System.EventHandler(this.btnNyaGlosor_Click);
             // 
             // Uppgift_13_1
             // 
