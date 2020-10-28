@@ -8,3 +8,13 @@ C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kvä
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\bin\Debug\Uppgift_13.1.pdb
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.exe
 C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.pdb
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\bin\Debug\Uppgift_13.1.exe.config
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\bin\Debug\Uppgift_13.1.exe
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\bin\Debug\Uppgift_13.1.pdb
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.csprojAssemblyReference.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13._1.Uppgift_13_1.resources
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13._1.Properties.Resources.resources
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.csproj.GenerateResource.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.csproj.CoreCompileInputs.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.exe
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.1\Uppgift_13.1\obj\Debug\Uppgift_13.1.pdb

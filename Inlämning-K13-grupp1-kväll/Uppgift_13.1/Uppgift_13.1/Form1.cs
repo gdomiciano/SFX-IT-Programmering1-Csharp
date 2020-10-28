@@ -13,6 +13,8 @@ namespace Uppgift_13._1
     public partial class Uppgift_13_1 : Form
     {
         List<Glos> glosor = new List<Glos>();
+        List<string> fellista = new List<string>();
+        int pos = 0;
         int felRäknare = 0;
         int rättRäknare = 0;
         public Uppgift_13_1()
@@ -39,13 +41,16 @@ namespace Uppgift_13._1
             gbxLäggtill.Enabled = false;
             btnStartaGlostest.Enabled = false;
             gbxGlostest.Enabled = true;
+            gbxResultat.Enabled = false;
+            lblResultat.Text = "";
+            fellista.Clear();
         }
 
         private void gbxGlostest_EnabledChanged(object sender, EventArgs e)
         {
             if (gbxGlostest.Enabled)
             {
-                tbxGlostestSvenskt.Text = glosor.First<Glos>().svenska;
+                tbxGlostestSvenskt.Text = glosor.ElementAt<Glos>(pos).svenska;
                 tbxGlostestSvenskt.Enabled = false;
                 tbxGlostestEngelskt.Focus();
             }
@@ -53,30 +58,39 @@ namespace Uppgift_13._1
 
         private void btnSvara_Click(object sender, EventArgs e)
         {
-            if (tbxGlostestEngelskt.Text.Equals(glosor.First<Glos>().engelska))
+            if (tbxGlostestEngelskt.Text.Equals(glosor.ElementAt<Glos>(pos).engelska))
             {
                 rättRäknare++;
             }
             else
             {
                 felRäknare++;
+                fellista.Add($"\ndu har skrivit fel ord {tbxGlostestEngelskt.Text} " + 
+                    $"\nrätt ord är {glosor.ElementAt<Glos>(pos).engelska} för {glosor.ElementAt<Glos>(pos).svenska}");
             }
-            glosor.RemoveAt(0);
+            pos++;
 
-            if (glosor.Count == 0)
+            if (glosor.Count == pos)
             {
                 gbxResultat.Enabled = true;
+                btnStartaGlostest.Enabled = true;
              
                 lblResultat.Text = $"Du hade: \n\t{rättRäknare} rätt svaror \n\t{felRäknare} fel svaror!";
+
+                for (int i = 0; i < fellista.Count; i++)
+                {
+                    lblResultat.Text+=fellista.ElementAt(i);
+                }
+
                 tbxGlostestEngelskt.Clear();
                 tbxGlostestSvenskt.Clear();
                 gbxGlostest.Enabled = false;
                 btnNyaGlosor.Enabled = true;
-
+                pos = rättRäknare = felRäknare = 0;
             }
             else
             {
-                tbxGlostestSvenskt.Text = glosor.First<Glos>().svenska;
+                tbxGlostestSvenskt.Text = glosor.ElementAt<Glos>(pos).svenska;
                 tbxGlostestEngelskt.Clear();
             }
         }
@@ -86,6 +100,9 @@ namespace Uppgift_13._1
             gbxLäggtill.Enabled = true;
             lblResultat.Text = "";
             btnNyaGlosor.Enabled = false;
+
+            //reset list and variables
+            glosor.Clear();
         }
     }
 }
