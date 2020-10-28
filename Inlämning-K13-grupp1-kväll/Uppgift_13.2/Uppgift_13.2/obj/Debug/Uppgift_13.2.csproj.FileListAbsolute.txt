@@ -1,0 +1,10 @@
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\bin\Debug\Uppgift_13.2.exe.config
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\bin\Debug\Uppgift_13.2.exe
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\bin\Debug\Uppgift_13.2.pdb
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13.2.csprojAssemblyReference.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13._2.Uppgift_13_2.resources
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13._2.Properties.Resources.resources
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13.2.csproj.GenerateResource.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13.2.csproj.CoreCompileInputs.cache
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13.2.exe
+C:\git\sfx\SFX-IT-Programmering1-Csharp\Inlämning-K13-grupp1-kväll\Uppgift_13.2\Uppgift_13.2\obj\Debug\Uppgift_13.2.pdb

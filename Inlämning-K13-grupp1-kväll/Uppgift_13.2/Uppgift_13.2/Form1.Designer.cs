@@ -37,47 +37,53 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 26);
+            this.label1.Location = new System.Drawing.Point(25, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Parentesföljd:";
             // 
             // tbxParentesFöljd
             // 
-            this.tbxParentesFöljd.Location = new System.Drawing.Point(128, 23);
+            this.tbxParentesFöljd.Location = new System.Drawing.Point(176, 34);
+            this.tbxParentesFöljd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxParentesFöljd.Name = "tbxParentesFöljd";
-            this.tbxParentesFöljd.Size = new System.Drawing.Size(142, 22);
+            this.tbxParentesFöljd.Size = new System.Drawing.Size(194, 29);
             this.tbxParentesFöljd.TabIndex = 1;
             // 
             // lblResultat
             // 
             this.lblResultat.AutoSize = true;
             this.lblResultat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResultat.Location = new System.Drawing.Point(21, 64);
-            this.lblResultat.MinimumSize = new System.Drawing.Size(250, 20);
+            this.lblResultat.Location = new System.Drawing.Point(29, 96);
+            this.lblResultat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultat.MinimumSize = new System.Drawing.Size(344, 30);
             this.lblResultat.Name = "lblResultat";
-            this.lblResultat.Size = new System.Drawing.Size(250, 20);
+            this.lblResultat.Size = new System.Drawing.Size(344, 30);
             this.lblResultat.TabIndex = 2;
             // 
             // btnKontrolera
             // 
-            this.btnKontrolera.Location = new System.Drawing.Point(90, 107);
+            this.btnKontrolera.Location = new System.Drawing.Point(124, 160);
+            this.btnKontrolera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKontrolera.Name = "btnKontrolera";
-            this.btnKontrolera.Size = new System.Drawing.Size(106, 30);
+            this.btnKontrolera.Size = new System.Drawing.Size(146, 45);
             this.btnKontrolera.TabIndex = 3;
             this.btnKontrolera.Text = "Kontrolera";
             this.btnKontrolera.UseVisualStyleBackColor = true;
+            this.btnKontrolera.Click += new System.EventHandler(this.btnKontrolera_Click);
             // 
             // Uppgift_13_2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 149);
+            this.ClientSize = new System.Drawing.Size(408, 224);
             this.Controls.Add(this.btnKontrolera);
             this.Controls.Add(this.lblResultat);
             this.Controls.Add(this.tbxParentesFöljd);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Uppgift_13_2";
             this.Text = "Uppgift";
             this.ResumeLayout(false);
