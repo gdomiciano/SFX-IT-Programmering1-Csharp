@@ -16,5 +16,25 @@ namespace Uppgift_14._2
         {
             InitializeComponent();
         }
+
+        private void btnVisa_Click(object sender, EventArgs e)
+        {
+            int nummer = int.Parse(tbxNummer.Text);
+            int resultat = fåAntal(nummer);
+            lblResultat.Text = $"Antalet ciklar är {resultat}";
+        }
+
+        private int fåAntal(int nummer)
+        {
+            int total;
+            if(nummer == 1)
+            {
+                return 1;
+            }else
+            {
+                total = nummer + fåAntal(nummer - 1);
+            }
+            return total;
+        }
     }
 }
