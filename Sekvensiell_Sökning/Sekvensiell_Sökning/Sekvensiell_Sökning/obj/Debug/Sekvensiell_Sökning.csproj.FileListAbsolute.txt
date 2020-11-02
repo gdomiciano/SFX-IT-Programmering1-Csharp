@@ -1,0 +1,10 @@
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\bin\Debug\Sekvensiell_Sökning.exe.config
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\bin\Debug\Sekvensiell_Sökning.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\bin\Debug\Sekvensiell_Sökning.pdb
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.csprojAssemblyReference.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.Sekvensiell_Sökning.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.Properties.Resources.resources
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.csproj.GenerateResource.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.csproj.CoreCompileInputs.cache
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.exe
+C:\Users\geisy\Projekter\SFX-IT-Programmering1-Csharp\Sekvensiell_Sökning\Sekvensiell_Sökning\Sekvensiell_Sökning\obj\Debug\Sekvensiell_Sökning.pdb
