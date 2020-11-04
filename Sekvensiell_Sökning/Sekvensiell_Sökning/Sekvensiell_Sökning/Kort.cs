@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,53 +10,52 @@ namespace Sekvensiell_Sökning
     class Kort
     {
 
-        // Kortets x-läge
-        private int x;
-        // Kortets y-läge
-        private int y;
-        // Kortets valör
-        private int valör;
-        // Kortets bredd
-        private int bredd = 50;
+        private const int bredd = 50;
         // Kortets höjd
-        private int höjd = 70;
+        private const int höjd = 70;
         // Bestämmer om kortets fram eller baksida ska ritas
         private bool visaFramsida = true;
         /// <summary>
         /// Egenskap för att sätta/hämta kortets x-läge
         /// </summary>
-        public int X
+        public int x
         {
+            get; set;
         }
         /// <summary>
         /// Egenskap för att sätta/hämta kortets y-läge
         /// </summary>
-        public int Y
+        public int y
         {
+            get; set;
         }
         /// <summary>
         /// Egenskap för att sätta/hämta kortets valör
         /// </summary>
-        public int Valör
+        public int valör
         {
+            get; set;
         }
         /// <summary>
         /// Egenskap för att hämta kortets bredd
         /// </summary>
-        public int Bredd
-        {
-        }
+       // public int Bredd
+       // {
+       //     get; set;
+      //  }
         /// <summary>
         /// Egenskap för att hämta kortets höjd
         /// </summary>
-        public int Höjd
-        {
-        }
+     //   public int Höjd
+     //   {
+     //       get; set;
+     //   }
         /// <summary>
         /// Egenskap för att sätta/hämta om framsidan ska visas eller inte
         /// </summary>
         public bool VisaFramsida
         {
+            get; set;
         }
         /// <summary>
         /// Konstruktor som initierar ett kort
@@ -65,6 +65,9 @@ namespace Sekvensiell_Sökning
         /// <param name="valör">Kortets valör</param>
         public Kort(int x, int y, int valör)
         {
+            this.x = x;
+            this.y = y;
+            this.valör = valör;
         }
         /// <summary>
         /// Ritar ett ruterkort. En enda rutersymbol ritas i mitten av kortet.
@@ -72,6 +75,9 @@ namespace Sekvensiell_Sökning
         /// <param name="g"></param>
         public void Rita(Graphics g)
         {
+            Color färg = Color.DarkRed;
+            Pen penna = new Pen(färg);
+            SolidBrush pensel = new SolidBrush(färg);
             if (VisaFramsida)
             {
                 // Kortets framsida ritas
@@ -83,6 +89,9 @@ namespace Sekvensiell_Sökning
             else
             {
                 // Ritar baksidan som en röd rektangel
+
+                g.DrawRectangle(penna, this.x, this.y, bredd, höjd);
+                g.FillRectangle(pensel, this.x, this.y, bredd, höjd);
             }
         }
     }

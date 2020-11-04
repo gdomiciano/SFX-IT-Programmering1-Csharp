@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +27,13 @@ namespace Sekvensiell_Sökning
         /// Konstruktor som skapar en kortbunt. Kortbunten är sorterad
         /// och det kort med lägst värde ligger längst till vänster.
         /// </summary>
- public Kortlek()
+        public Kortlek()
         {
+            for (int i = 0; i < antalKort; i++)
+            {
+               korten[i] = new Kort((i+1)*60, 170, i);
+            }
+
         }
         /// <summary>
         /// Blandar kortleken genom att stega igenom den och byta plats på två kort.
@@ -42,9 +48,11 @@ namespace Sekvensiell_Sökning
             index = -1;
             avbryt = false;
         }
+
         // Ger index för det sökta kortet i kortbunten.
         public int Index
-        {
+        { 
+            get => this.index;
         }
         /// <summary>
         /// Söker efter ett kort med en viss valör i kortbunten. Metoden
@@ -53,6 +61,7 @@ namespace Sekvensiell_Sökning
         /// </summary>
         public bool SekventielltSökSteg(int söktValör)
         {
+            return false;
         }
         /// <summary>
         /// Ritar korten i kortbunten.
@@ -60,6 +69,10 @@ namespace Sekvensiell_Sökning
         /// <param name="g"></param>
         public void Rita(Graphics g)
         {
+            for (int i = 0; i < antalKort; i++)
+            {
+                korten[i].Rita(g);
+            }
         }
     }
 }
