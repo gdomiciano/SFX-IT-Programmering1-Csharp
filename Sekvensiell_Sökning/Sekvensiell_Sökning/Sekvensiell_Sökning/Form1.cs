@@ -14,6 +14,7 @@ namespace Sekvensiell_Sökning
     public partial class Sekvensiell_Sökning : Form
     {
             Kortlek kortbunt = new Kortlek();
+        Graphics g;
         public Sekvensiell_Sökning()
         {
             InitializeComponent();
@@ -21,11 +22,14 @@ namespace Sekvensiell_Sökning
 
         private void btnSök_Click(object sender, EventArgs e)
         {
-            
+            bool hittadeValör = kortbunt.SekventielltSökSteg(int.Parse(tbxSöktValör.Text));
+            tbxSöktValör.Enabled = false;
+            tbxIndex.Text = kortbunt.Index.ToString();
+            if (hittadeValör) btnSök.Enabled = false;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
+            g = e.Graphics;
             kortbunt.Rita(g);
         }
     }

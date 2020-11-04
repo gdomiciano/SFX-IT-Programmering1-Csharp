@@ -31,7 +31,7 @@ namespace Sekvensiell_Sökning
         {
             for (int i = 0; i < antalKort; i++)
             {
-               korten[i] = new Kort((i+1)*60, 170, i);
+               korten[i] = new Kort((i+1)*60, 180, i+2);
             }
 
         }
@@ -52,7 +52,7 @@ namespace Sekvensiell_Sökning
         // Ger index för det sökta kortet i kortbunten.
         public int Index
         { 
-            get => this.index;
+            get => index;
         }
         /// <summary>
         /// Söker efter ett kort med en viss valör i kortbunten. Metoden
@@ -61,19 +61,34 @@ namespace Sekvensiell_Sökning
         /// </summary>
         public bool SekventielltSökSteg(int söktValör)
         {
-           
-            return false;
+           for(iFor = 0; iFor < antalKort; iFor++)
+            {
+                if(korten[iFor].valör == söktValör)
+                {
+                    index = iFor;
+                    avbryt = true;
+                }
+                else
+                {
+                    avbryt = false;
+                }
+
+                korten[Index].visaFramsida = true;
+            }
+            return avbryt;
         }
         /// <summary>
         /// Ritar korten i kortbunten.
         /// </summary>
         /// <param name="g"></param>
-        public void Rita(Graphics g)
+        public void Rita(Graphics g )
         {
+            if (Index >= 0)
+            {
+                korten[Index].Rita(g);
+            }
             for (int i = 0; i < antalKort; i++)
             {
-
-                korten[i].VisaFramsida = true;
                 korten[i].Rita(g);
             }
         }

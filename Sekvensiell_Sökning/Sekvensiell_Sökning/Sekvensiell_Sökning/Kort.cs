@@ -10,12 +10,10 @@ namespace Sekvensiell_Sökning
 {
     class Kort
     {
-
+        // Kortets bredd
         private const int bredd = 50;
         // Kortets höjd
         private const int höjd = 70;
-        // Bestämmer om kortets fram eller baksida ska ritas
-        private bool visaFramsida = true;
         /// <summary>
         /// Egenskap för att sätta/hämta kortets x-läge
         /// </summary>
@@ -37,24 +35,11 @@ namespace Sekvensiell_Sökning
         {
             get; set;
         }
-        /// <summary>
-        /// Egenskap för att hämta kortets bredd
-        /// </summary>
-       // public int Bredd
-       // {
-       //     get; set;
-      //  }
-        /// <summary>
-        /// Egenskap för att hämta kortets höjd
-        /// </summary>
-     //   public int Höjd
-     //   {
-     //       get; set;
-     //   }
+
         /// <summary>
         /// Egenskap för att sätta/hämta om framsidan ska visas eller inte
         /// </summary>
-        public bool VisaFramsida
+        public bool visaFramsida
         {
             get; set;
         }
@@ -69,6 +54,7 @@ namespace Sekvensiell_Sökning
             this.x = x;
             this.y = y;
             this.valör = valör;
+            this.visaFramsida = false;
         }
         /// <summary>
         /// Ritar ett ruterkort. En enda rutersymbol ritas i mitten av kortet.
@@ -81,7 +67,7 @@ namespace Sekvensiell_Sökning
             Pen penna = new Pen(rödFärg);
             SolidBrush pensel = new SolidBrush(rödFärg);
 
-            if (VisaFramsida)
+            if (visaFramsida)
             {
                 // Kortets framsida ritas
                 // Rita en vit framsida
