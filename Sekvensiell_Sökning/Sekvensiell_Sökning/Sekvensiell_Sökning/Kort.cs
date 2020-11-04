@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,21 +76,37 @@ namespace Sekvensiell_Sökning
         /// <param name="g"></param>
         public void Rita(Graphics g)
         {
-            Color färg = Color.DarkRed;
-            Pen penna = new Pen(färg);
-            SolidBrush pensel = new SolidBrush(färg);
+            Color rödFärg = Color.DarkRed;
+            Color vitFärg = Color.White;
+            Pen penna = new Pen(rödFärg);
+            SolidBrush pensel = new SolidBrush(rödFärg);
+
             if (VisaFramsida)
             {
                 // Kortets framsida ritas
                 // Rita en vit framsida
+                penna.Color = pensel.Color = vitFärg;
+                g.DrawRectangle(penna, this.x, this.y, bredd, höjd);
+                g.FillRectangle(pensel, this.x, this.y, bredd, höjd);
+
+                penna.Color = pensel.Color = rödFärg;
 
                 // Rita en rutersymbol i mitten
+                Point[] points = {
+                new Point(this.x + bredd/2, this.y + höjd/4),
+                new Point(this.x + (bredd/4)*3, this.y + höjd/2),
+                new Point(this.x + bredd/2, this.y + (höjd/4)*3),
+                new Point(this.x + (bredd/4), this.y + höjd/2)};
+                g.DrawPolygon(penna, points);
+                g.FillPolygon(pensel, points);
+
                 // Skriv valören i hörnen
+                g.DrawString(this.valör.ToString(), SystemFonts.DefaultFont, pensel, this.x + 5, this.y + 5);
+                g.DrawString(this.valör.ToString(), SystemFonts.DefaultFont, pensel, this.x + bredd - 15, this.y + höjd - 15);
             }
             else
             {
                 // Ritar baksidan som en röd rektangel
-
                 g.DrawRectangle(penna, this.x, this.y, bredd, höjd);
                 g.FillRectangle(pensel, this.x, this.y, bredd, höjd);
             }

@@ -61,6 +61,7 @@ namespace Sekvensiell_Sökning
         /// </summary>
         public bool SekventielltSökSteg(int söktValör)
         {
+           
             return false;
         }
         /// <summary>
@@ -71,6 +72,8 @@ namespace Sekvensiell_Sökning
         {
             for (int i = 0; i < antalKort; i++)
             {
+
+                korten[i].VisaFramsida = true;
                 korten[i].Rita(g);
             }
         }
