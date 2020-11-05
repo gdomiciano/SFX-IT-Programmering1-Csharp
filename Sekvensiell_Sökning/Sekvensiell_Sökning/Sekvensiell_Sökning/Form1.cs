@@ -13,8 +13,7 @@ namespace Sekvensiell_Sökning
 {
     public partial class Sekvensiell_Sökning : Form
     {
-            Kortlek kortbunt = new Kortlek();
-        Graphics g;
+        Kortlek kortbunt = new Kortlek();
         public Sekvensiell_Sökning()
         {
             InitializeComponent();
@@ -24,15 +23,27 @@ namespace Sekvensiell_Sökning
         {
             bool hittadeValör = kortbunt.SekventielltSökSteg(int.Parse(tbxSöktValör.Text));
             tbxSöktValör.Enabled = false;
-            tbxIndex.Text = kortbunt.Index.ToString();
+            tbxIndex.Text = kortbunt.Index > -1 ?  kortbunt.Index.ToString() : "";
+
             if (hittadeValör) btnSök.Enabled = false;
 
             Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            g = e.Graphics;
+            Graphics g = e.Graphics;
             kortbunt.Rita(g);
+        }
+
+        private void btnBlanda_Click(object sender, EventArgs e)
+        {
+            kortbunt.Blanda();
+            tbxSöktValör.Clear();
+            tbxIndex.Clear();
+            tbxSöktValör.Enabled = true;
+            btnSök.Enabled = true;
+            Invalidate();
+
         }
     }
 }

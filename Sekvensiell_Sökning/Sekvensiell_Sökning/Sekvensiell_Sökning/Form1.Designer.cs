@@ -45,7 +45,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 17);
+            this.label1.Size = new System.Drawing.Size(479, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kortens valörer är 2 till 10. Sök efter ett kort och se dess index.";
             // 
@@ -56,7 +56,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(14, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 17);
+            this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sökt valör:";
             // 
@@ -67,7 +67,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
             this.label3.Location = new System.Drawing.Point(14, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Index:";
             // 
@@ -76,7 +76,7 @@
             this.tbxSöktValör.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSöktValör.Location = new System.Drawing.Point(108, 76);
             this.tbxSöktValör.Name = "tbxSöktValör";
-            this.tbxSöktValör.Size = new System.Drawing.Size(88, 23);
+            this.tbxSöktValör.Size = new System.Drawing.Size(88, 26);
             this.tbxSöktValör.TabIndex = 3;
             // 
             // tbxIndex
@@ -84,7 +84,7 @@
             this.tbxIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxIndex.Location = new System.Drawing.Point(108, 117);
             this.tbxIndex.Name = "tbxIndex";
-            this.tbxIndex.Size = new System.Drawing.Size(88, 23);
+            this.tbxIndex.Size = new System.Drawing.Size(88, 26);
             this.tbxIndex.TabIndex = 4;
             // 
             // btnSök
@@ -109,10 +109,11 @@
             this.btnBlanda.TabIndex = 6;
             this.btnBlanda.Text = "Blanda";
             this.btnBlanda.UseVisualStyleBackColor = true;
+            this.btnBlanda.Click += new System.EventHandler(this.btnBlanda_Click);
             // 
             // Sekvensiell_Sökning
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(687, 353);

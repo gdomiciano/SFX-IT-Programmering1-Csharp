@@ -11,15 +11,14 @@ namespace Sekvensiell_Sökning
     {
 
         // Slumptalsgenerator används för att blanda kortleken
-        Random slump = new Random();
+        private Random slump = new Random();
         // Antalet kort i kortbunten
         private static int antalKort = 9;
         // Korten i kortbunten
         private Kort[] korten = new Kort[antalKort];
         // Index för for-loopen vid sekventiell sökning
         private int iFor = 0;
-        // Index för det sökta kortet.
-        private int index = -1;
+
         // Avbryt sökningen för att kortet har hittats eller för att
         // hela kortbunten har sökts igenom.
         private bool avbryt = false;
@@ -42,18 +41,24 @@ namespace Sekvensiell_Sökning
         public void Blanda()
         {
             // Blanda kortbunten
-            // Visa kortbuntens baksida
+            for (int i = 0; i < korten.Length; i++)
+            {
+                int r = slump.Next(0, 8);
+                korten[i].visaFramsida = korten[r].visaFramsida = false;
+
+                Kort temp = korten[i];
+                korten[i] = korten[r];
+                korten[r] = temp;
+
+            };
             // Initiera variablerna som hanterar sekventiell sökning
             iFor = 0;
-            index = -1;
+            Index = -1;
             avbryt = false;
         }
 
         // Ger index för det sökta kortet i kortbunten.
-        public int Index
-        { 
-            get => index;
-        }
+        public int Index { get; private set; } = -1;
         /// <summary>
         /// Söker efter ett kort med en viss valör i kortbunten. Metoden
         /// som används är sekventiell sökning. När kortet har hittats returneras
@@ -74,7 +79,7 @@ namespace Sekvensiell_Sökning
                     avbryt = false;
                 }
 
-                index = iFor;
+                Index = iFor;
              korten[iFor].visaFramsida = true;
             }
             return avbryt;
