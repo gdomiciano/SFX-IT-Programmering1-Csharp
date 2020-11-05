@@ -61,19 +61,21 @@ namespace Sekvensiell_Sökning
         /// </summary>
         public bool SekventielltSökSteg(int söktValör)
         {
-           for(iFor = 0; iFor < antalKort; iFor++)
+            //index = iFor;
+            for (iFor = 0; iFor < antalKort; iFor++)
             {
-                if(korten[iFor].valör == söktValör)
+
+                if (korten[iFor].valör == söktValör)
                 {
-                    index = iFor;
                     avbryt = true;
+                    break;
                 }
-                else
-                {
+                else { 
                     avbryt = false;
                 }
 
-                korten[Index].visaFramsida = true;
+                index = iFor;
+             korten[iFor].visaFramsida = true;
             }
             return avbryt;
         }
@@ -83,10 +85,10 @@ namespace Sekvensiell_Sökning
         /// <param name="g"></param>
         public void Rita(Graphics g )
         {
-            if (Index >= 0)
-            {
-                korten[Index].Rita(g);
-            }
+            //if (Index >= 0)
+            //{
+            //    korten[Index].Rita(g);
+            //}
             for (int i = 0; i < antalKort; i++)
             {
                 korten[i].Rita(g);

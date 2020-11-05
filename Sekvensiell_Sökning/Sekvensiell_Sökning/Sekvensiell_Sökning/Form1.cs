@@ -26,6 +26,8 @@ namespace Sekvensiell_Sökning
             tbxSöktValör.Enabled = false;
             tbxIndex.Text = kortbunt.Index.ToString();
             if (hittadeValör) btnSök.Enabled = false;
+
+            Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
