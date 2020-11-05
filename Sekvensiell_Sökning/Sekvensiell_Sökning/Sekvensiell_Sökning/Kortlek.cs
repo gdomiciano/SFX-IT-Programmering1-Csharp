@@ -70,17 +70,16 @@ namespace Sekvensiell_Sökning
             for (iFor = 0; iFor < antalKort; iFor++)
             {
 
+                korten[iFor].visaFramsida = true;
                 if (korten[iFor].valör == söktValör)
                 {
                     avbryt = true;
+                    Index = iFor;
                     break;
                 }
                 else { 
                     avbryt = false;
                 }
-
-                Index = iFor;
-             korten[iFor].visaFramsida = true;
             }
             return avbryt;
         }

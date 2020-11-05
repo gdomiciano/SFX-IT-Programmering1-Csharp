@@ -23,9 +23,13 @@ namespace Sekvensiell_Sökning
         {
             bool hittadeValör = kortbunt.SekventielltSökSteg(int.Parse(tbxSöktValör.Text));
             tbxSöktValör.Enabled = false;
-            tbxIndex.Text = kortbunt.Index > -1 ?  kortbunt.Index.ToString() : "";
 
-            if (hittadeValör) btnSök.Enabled = false;
+            if (hittadeValör)
+            {
+                tbxIndex.Text = kortbunt.Index.ToString();
+                btnSök.Enabled = false;
+            }
+
 
             Invalidate();
         }

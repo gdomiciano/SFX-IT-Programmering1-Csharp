@@ -81,6 +81,7 @@
             // 
             // tbxIndex
             // 
+            this.tbxIndex.Enabled = false;
             this.tbxIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxIndex.Location = new System.Drawing.Point(108, 117);
             this.tbxIndex.Name = "tbxIndex";
