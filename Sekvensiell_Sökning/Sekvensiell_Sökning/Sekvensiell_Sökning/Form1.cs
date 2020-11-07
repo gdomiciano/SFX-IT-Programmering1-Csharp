@@ -17,6 +17,7 @@ namespace Sekvensiell_Sökning
         public Sekvensiell_Sökning()
         {
             InitializeComponent();
+            kortbunt.Blanda();
         }
 
         private void btnSök_Click(object sender, EventArgs e)
@@ -30,7 +31,6 @@ namespace Sekvensiell_Sökning
                 btnSök.Enabled = false;
             }
 
-
             Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
@@ -42,12 +42,11 @@ namespace Sekvensiell_Sökning
         private void btnBlanda_Click(object sender, EventArgs e)
         {
             kortbunt.Blanda();
+            Invalidate();
             tbxSöktValör.Clear();
             tbxIndex.Clear();
             tbxSöktValör.Enabled = true;
             btnSök.Enabled = true;
-            Invalidate();
-
         }
     }
 }

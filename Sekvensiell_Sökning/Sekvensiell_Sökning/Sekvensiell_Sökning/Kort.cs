@@ -64,17 +64,20 @@ namespace Sekvensiell_Sökning
                 // Kortets framsida ritas
                 // Rita en vit framsida
                 penna.Color = pensel.Color = vitFärg;
+
                 g.DrawRectangle(penna, x, y, Bredd, Höjd);
                 g.FillRectangle(pensel, this.x, this.y, Bredd, Höjd);
 
-                penna.Color = pensel.Color = rödFärg;
 
                 // Rita en rutersymbol i mitten
+                penna.Color = pensel.Color = rödFärg;
+
                 Point[] points = {
                 new Point(this.x + Bredd/2, this.y + Höjd/4),
                 new Point(this.x + (Bredd/4)*3, this.y + Höjd/2),
                 new Point(this.x + Bredd/2, this.y + (Höjd/4)*3),
                 new Point(this.x + (Bredd/4), this.y + Höjd/2)};
+
                 g.DrawPolygon(penna, points);
                 g.FillPolygon(pensel, points);
 

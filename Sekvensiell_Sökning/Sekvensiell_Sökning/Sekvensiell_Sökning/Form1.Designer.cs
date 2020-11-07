@@ -92,7 +92,7 @@
             // 
             this.btnSök.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSök.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSök.Location = new System.Drawing.Point(154, 307);
+            this.btnSök.Location = new System.Drawing.Point(157, 270);
             this.btnSök.Name = "btnSök";
             this.btnSök.Size = new System.Drawing.Size(176, 34);
             this.btnSök.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.btnBlanda.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBlanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlanda.Location = new System.Drawing.Point(335, 307);
+            this.btnBlanda.Location = new System.Drawing.Point(338, 270);
             this.btnBlanda.Name = "btnBlanda";
             this.btnBlanda.Size = new System.Drawing.Size(127, 34);
             this.btnBlanda.TabIndex = 6;
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(687, 353);
+            this.ClientSize = new System.Drawing.Size(687, 320);
             this.Controls.Add(this.btnBlanda);
             this.Controls.Add(this.btnSök);
             this.Controls.Add(this.tbxIndex);

@@ -18,10 +18,10 @@ namespace Sekvensiell_Sökning
         private Kort[] korten = new Kort[antalKort];
         // Index för for-loopen vid sekventiell sökning
         private int iFor = 0;
-
         // Avbryt sökningen för att kortet har hittats eller för att
         // hela kortbunten har sökts igenom.
         private bool avbryt = false;
+
         /// <summary>
         /// Konstruktor som skapar en kortbunt. Kortbunten är sorterad
         /// och det kort med lägst värde ligger längst till vänster.
@@ -30,10 +30,15 @@ namespace Sekvensiell_Sökning
         {
             for (int i = 0; i < antalKort; i++)
             {
-               korten[i] = new Kort((i+1)*60, 180, i+2);
+               korten[i] = skapaKort(i, i+2);
             }
-
         }
+
+        private Kort skapaKort(int position, int valör)
+        {
+            return new Kort((position + 1) * 60, 170, valör);
+        }
+
         /// <summary>
         /// Blandar kortleken genom att stega igenom den och byta plats på två kort.
         /// Korten vänds sedan med framsidan nedåt.
@@ -41,16 +46,15 @@ namespace Sekvensiell_Sökning
         public void Blanda()
         {
             // Blanda kortbunten
-            for (int i = 0; i < korten.Length; i++)
+            for (int i = 0; i < antalKort; i++)
             {
                 int r = slump.Next(0, 8);
-                korten[i].visaFramsida = korten[r].visaFramsida = false;
 
                 Kort temp = korten[i];
-                korten[i] = korten[r];
-                korten[r] = temp;
-
+                korten[i] = skapaKort(i, korten[r].valör);
+                korten[r] = skapaKort(r, temp.valör);
             };
+
             // Initiera variablerna som hanterar sekventiell sökning
             iFor = 0;
             Index = -1;
@@ -59,6 +63,7 @@ namespace Sekvensiell_Sökning
 
         // Ger index för det sökta kortet i kortbunten.
         public int Index { get; private set; } = -1;
+
         /// <summary>
         /// Söker efter ett kort med en viss valör i kortbunten. Metoden
         /// som används är sekventiell sökning. När kortet har hittats returneras
@@ -67,20 +72,18 @@ namespace Sekvensiell_Sökning
         public bool SekventielltSökSteg(int söktValör)
         {
             //index = iFor;
-            for (iFor = 0; iFor < antalKort; iFor++)
+            for (int i = 0; i <= iFor; i++)
             {
-
-                korten[iFor].visaFramsida = true;
-                if (korten[iFor].valör == söktValör)
+                korten[i].visaFramsida = true;
+                if (korten[i].valör == söktValör)
                 {
                     avbryt = true;
-                    Index = iFor;
+                    Index = i;
                     break;
                 }
-                else { 
-                    avbryt = false;
-                }
             }
+
+            if (iFor < antalKort) iFor++;
             return avbryt;
         }
         /// <summary>
@@ -89,10 +92,6 @@ namespace Sekvensiell_Sökning
         /// <param name="g"></param>
         public void Rita(Graphics g )
         {
-            //if (Index >= 0)
-            //{
-            //    korten[Index].Rita(g);
-            //}
             for (int i = 0; i < antalKort; i++)
             {
                 korten[i].Rita(g);
