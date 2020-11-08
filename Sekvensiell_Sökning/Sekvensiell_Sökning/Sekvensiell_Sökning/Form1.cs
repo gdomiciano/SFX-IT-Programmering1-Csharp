@@ -16,6 +16,7 @@ namespace Sekvensiell_Sökning
     public partial class Sekvensiell_Sökning : Form
     {
         Kortlek kortbunt = new Kortlek();
+        Historik historik = new Historik();
         int söktValör = -1;
         public Sekvensiell_Sökning()
         {
@@ -35,10 +36,18 @@ namespace Sekvensiell_Sökning
             {
                 tbxIndex.Text = kortbunt.Index.ToString();
                 btnSök.Enabled = false;
+                handetaHistorik();
             }
 
             Invalidate();
         }
+
+        private void handetaHistorik()
+        {
+            tbxHistorik.AppendText(historik.visaSistaArtikel(söktValör, kortbunt.Index));
+            btnKlaraHistorik.Enabled = true;
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -63,24 +72,19 @@ namespace Sekvensiell_Sökning
         /// </summary>
         private void tbxSöktValör_TextChanged(object sender, EventArgs e)
         {
+            söktValör = -1;
             btnSök.Enabled = false;
-            if (!int.TryParse(tbxSöktValör.Text, out söktValör) && tbxSöktValör.Text != "")
-            {
-                visaFeedback("fel");
-                return;
-            }
-            else if (söktValör > 10)
-            {
-                visaFeedback("fel");
-            }
-            else if (söktValör > 0 && söktValör <= 10)
+
+            if (tbxSöktValör.Text == "" && söktValör == -1) { visaFeedback(); return; }
+            
+            if (int.TryParse(tbxSöktValör.Text, out söktValör) && söktValör > 1 && söktValör <= 10)
             {
                 visaFeedback("rätt");
                 btnSök.Enabled = true;
             }
-            else
+            else 
             {
-                visaFeedback();
+                visaFeedback("fel");
             }
         }
 
@@ -104,6 +108,13 @@ namespace Sekvensiell_Sökning
                     lblFeedback.Text = "";
                     break;
             }
+        }
+
+        private void btnKlaraHistorik_Click(object sender, EventArgs e)
+        {
+            historik.klaraArtikel();
+            tbxHistorik.Clear();
+            btnKlaraHistorik.Enabled = false;
         }
     }
 }

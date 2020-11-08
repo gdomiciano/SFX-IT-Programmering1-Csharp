@@ -38,8 +38,8 @@
             this.btnBlanda = new System.Windows.Forms.Button();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.gbxHistorik = new System.Windows.Forms.GroupBox();
-            this.tbxKlaraHistorik = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnKlaraHistorik = new System.Windows.Forms.Button();
+            this.tbxHistorik = new System.Windows.Forms.TextBox();
             this.gbxHistorik.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,9 +134,8 @@
             // 
             // gbxHistorik
             // 
-            this.gbxHistorik.Controls.Add(this.textBox1);
-            this.gbxHistorik.Controls.Add(this.tbxKlaraHistorik);
-            this.gbxHistorik.Enabled = false;
+            this.gbxHistorik.Controls.Add(this.tbxHistorik);
+            this.gbxHistorik.Controls.Add(this.btnKlaraHistorik);
             this.gbxHistorik.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxHistorik.ForeColor = System.Drawing.SystemColors.Info;
             this.gbxHistorik.Location = new System.Drawing.Point(674, 12);
@@ -146,25 +145,28 @@
             this.gbxHistorik.TabStop = false;
             this.gbxHistorik.Text = "Sökhistorik";
             // 
-            // tbxKlaraHistorik
+            // btnKlaraHistorik
             // 
-            this.tbxKlaraHistorik.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbxKlaraHistorik.Location = new System.Drawing.Point(6, 245);
-            this.tbxKlaraHistorik.Name = "tbxKlaraHistorik";
-            this.tbxKlaraHistorik.Size = new System.Drawing.Size(229, 36);
-            this.tbxKlaraHistorik.TabIndex = 0;
-            this.tbxKlaraHistorik.Text = "Klara historiken";
-            this.tbxKlaraHistorik.UseVisualStyleBackColor = true;
+            this.btnKlaraHistorik.Enabled = false;
+            this.btnKlaraHistorik.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnKlaraHistorik.Location = new System.Drawing.Point(6, 245);
+            this.btnKlaraHistorik.Name = "btnKlaraHistorik";
+            this.btnKlaraHistorik.Size = new System.Drawing.Size(229, 36);
+            this.btnKlaraHistorik.TabIndex = 0;
+            this.btnKlaraHistorik.Text = "Klara historiken";
+            this.btnKlaraHistorik.UseVisualStyleBackColor = true;
+            this.btnKlaraHistorik.Click += new System.EventHandler(this.btnKlaraHistorik_Click);
             // 
-            // textBox1
+            // tbxHistorik
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(228, 210);
-            this.textBox1.TabIndex = 1;
+            this.tbxHistorik.Enabled = false;
+            this.tbxHistorik.Location = new System.Drawing.Point(7, 29);
+            this.tbxHistorik.Multiline = true;
+            this.tbxHistorik.Name = "tbxHistorik";
+            this.tbxHistorik.ReadOnly = true;
+            this.tbxHistorik.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxHistorik.Size = new System.Drawing.Size(228, 210);
+            this.tbxHistorik.TabIndex = 1;
             // 
             // Sekvensiell_Sökning
             // 
@@ -203,8 +205,8 @@
         private System.Windows.Forms.Button btnBlanda;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.GroupBox gbxHistorik;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button tbxKlaraHistorik;
+        private System.Windows.Forms.TextBox tbxHistorik;
+        private System.Windows.Forms.Button btnKlaraHistorik;
     }
 }
 
