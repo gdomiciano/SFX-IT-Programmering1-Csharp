@@ -37,6 +37,10 @@
             this.btnSök = new System.Windows.Forms.Button();
             this.btnBlanda = new System.Windows.Forms.Button();
             this.lblFeedback = new System.Windows.Forms.Label();
+            this.gbxHistorik = new System.Windows.Forms.GroupBox();
+            this.tbxKlaraHistorik = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gbxHistorik.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -128,12 +132,47 @@
             this.lblFeedback.Size = new System.Drawing.Size(0, 19);
             this.lblFeedback.TabIndex = 7;
             // 
+            // gbxHistorik
+            // 
+            this.gbxHistorik.Controls.Add(this.textBox1);
+            this.gbxHistorik.Controls.Add(this.tbxKlaraHistorik);
+            this.gbxHistorik.Enabled = false;
+            this.gbxHistorik.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxHistorik.ForeColor = System.Drawing.SystemColors.Info;
+            this.gbxHistorik.Location = new System.Drawing.Point(674, 12);
+            this.gbxHistorik.Name = "gbxHistorik";
+            this.gbxHistorik.Size = new System.Drawing.Size(241, 292);
+            this.gbxHistorik.TabIndex = 8;
+            this.gbxHistorik.TabStop = false;
+            this.gbxHistorik.Text = "Sökhistorik";
+            // 
+            // tbxKlaraHistorik
+            // 
+            this.tbxKlaraHistorik.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbxKlaraHistorik.Location = new System.Drawing.Point(6, 245);
+            this.tbxKlaraHistorik.Name = "tbxKlaraHistorik";
+            this.tbxKlaraHistorik.Size = new System.Drawing.Size(229, 36);
+            this.tbxKlaraHistorik.TabIndex = 0;
+            this.tbxKlaraHistorik.Text = "Klara historiken";
+            this.tbxKlaraHistorik.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 29);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(228, 210);
+            this.textBox1.TabIndex = 1;
+            // 
             // Sekvensiell_Sökning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.ClientSize = new System.Drawing.Size(687, 320);
+            this.ClientSize = new System.Drawing.Size(937, 320);
+            this.Controls.Add(this.gbxHistorik);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.btnBlanda);
             this.Controls.Add(this.btnSök);
@@ -146,6 +185,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sekvensiell_Sökning";
             this.Text = "Sekvensiell Sökning";
+            this.gbxHistorik.ResumeLayout(false);
+            this.gbxHistorik.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +202,9 @@
         private System.Windows.Forms.Button btnSök;
         private System.Windows.Forms.Button btnBlanda;
         private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.GroupBox gbxHistorik;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button tbxKlaraHistorik;
     }
 }
 

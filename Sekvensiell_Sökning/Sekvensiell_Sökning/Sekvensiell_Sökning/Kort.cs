@@ -10,10 +10,14 @@ namespace Sekvensiell_Sökning
 {
     class Kort
     {
-        // Kortets bredd
-        private const int bredd = 50;
-        // Kortets höjd
-        private const int höjd = 70;
+        /// <summary>
+        /// Egenskap för att sätta/hämta kortets bredd
+        /// </summary>
+        public int bredd { get; set; } = 50;
+        /// <summary>
+        /// Egenskap för att sätta/hämta kortets höjd
+        /// </summary>
+        public int höjd { get; set; } = 70;
         /// <summary>
         /// Egenskap för att sätta/hämta kortets x-läge
         /// </summary>
@@ -31,10 +35,6 @@ namespace Sekvensiell_Sökning
         /// Egenskap för att sätta/hämta om framsidan ska visas eller inte
         /// </summary>
         public bool visaFramsida {get; set;} = false;
-
-        public static int Bredd => bredd;
-
-        public static int Höjd => höjd;
 
         /// <summary>
         /// Konstruktor som initierar ett kort
@@ -65,31 +65,33 @@ namespace Sekvensiell_Sökning
                 // Rita en vit framsida
                 penna.Color = pensel.Color = vitFärg;
 
-                g.DrawRectangle(penna, x, y, Bredd, Höjd);
-                g.FillRectangle(pensel, this.x, this.y, Bredd, Höjd);
+                g.DrawRectangle(penna, x, y, bredd, höjd);
+                g.FillRectangle(pensel, x, y, bredd, höjd);
 
 
                 // Rita en rutersymbol i mitten
                 penna.Color = pensel.Color = rödFärg;
 
+                //addera +1 när dela stolek by 4 eftersom det är en heltal och jag vill inte byta datatyp som Point ävands int
                 Point[] points = {
-                new Point(this.x + Bredd/2, this.y + Höjd/4),
-                new Point(this.x + (Bredd/4)*3, this.y + Höjd/2),
-                new Point(this.x + Bredd/2, this.y + (Höjd/4)*3),
-                new Point(this.x + (Bredd/4), this.y + Höjd/2)};
+                    new Point((x + bredd/2), (y + (höjd/4)+1)),
+                    new Point((x + ((bredd/4)*3)+1), (y + höjd/2)),
+                    new Point((x + bredd/2), (y + ((höjd/4)*3)+1)),
+                    new Point((x + (bredd/4)+1), (y + höjd/2))
+                };
 
                 g.DrawPolygon(penna, points);
                 g.FillPolygon(pensel, points);
 
                 // Skriv valören i hörnen
                 g.DrawString(valör.ToString(), SystemFonts.DefaultFont, pensel, x + 5, y + 5);
-                g.DrawString(valör.ToString(), SystemFonts.DefaultFont, pensel, x + Bredd - 15, y + Höjd - 15);
+                g.DrawString(valör.ToString(), SystemFonts.DefaultFont, pensel, x + bredd - 15, y + höjd - 15);
             }
             else
             {
                 // Ritar baksidan som en röd rektangel
-                g.DrawRectangle(penna, x, y, Bredd, Höjd);
-                g.FillRectangle(pensel, x, y, Bredd, Höjd);
+                g.DrawRectangle(penna, x, y, bredd, höjd);
+                g.FillRectangle(pensel, x, y, bredd, höjd);
             }
         }
     }

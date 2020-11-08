@@ -23,9 +23,11 @@ namespace Sekvensiell_Sökning
             kortbunt.Blanda();
         }
 
+        /// <summary>
+        /// göra sokning.
+        /// </summary>
         private void btnSök_Click(object sender, EventArgs e)
         {
-
             bool hittadeValör = kortbunt.SekventielltSökSteg(söktValör);
             tbxSöktValör.Enabled = false;
 
@@ -43,14 +45,22 @@ namespace Sekvensiell_Sökning
             kortbunt.Rita(g);
         }
 
+        /// <summary>
+        /// återställa programmet status.
+        /// </summary>
         private void btnBlanda_Click(object sender, EventArgs e)
         {
             kortbunt.Blanda();
             Invalidate();
             tbxSöktValör.Clear();
             tbxIndex.Clear();
+            tbxSöktValör.Enabled = true;
+            tbxSöktValör.Focus();
         }
 
+        /// <summary>
+        /// Validera tbxSöktValör och visa feedback om det behövs.
+        /// </summary>
         private void tbxSöktValör_TextChanged(object sender, EventArgs e)
         {
             btnSök.Enabled = false;
@@ -74,13 +84,17 @@ namespace Sekvensiell_Sökning
             }
         }
 
+        /// <summary>
+        /// Visa feedback meddelande intill tbxSöktValör.
+        /// </summary>
+        /// <param name="type">kan vara fel eller rätt, annars unset</param>
         private void visaFeedback(string type = "unset")
         {
             switch (type)
             {
                 case "fel":
                     lblFeedback.ForeColor = Color.DarkRed;
-                    lblFeedback.Text = "Skriv in en heltal mellan 2 och 10 för att aktivera Sekventiell sökning knappen";
+                    lblFeedback.Text = "Mata in en heltal mellan 2 och 10 för att aktivera Sekventiell sökning knappen";
                     break;
                 case "rätt":
                     lblFeedback.ForeColor = Color.LightGreen;
