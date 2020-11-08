@@ -36,6 +36,7 @@
             this.tbxIndex = new System.Windows.Forms.TextBox();
             this.btnSök = new System.Windows.Forms.Button();
             this.btnBlanda = new System.Windows.Forms.Button();
+            this.lblFeedback = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,24 +74,28 @@
             // 
             // tbxSöktValör
             // 
+            this.tbxSöktValör.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxSöktValör.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSöktValör.Location = new System.Drawing.Point(108, 76);
             this.tbxSöktValör.Name = "tbxSöktValör";
-            this.tbxSöktValör.Size = new System.Drawing.Size(88, 26);
+            this.tbxSöktValör.Size = new System.Drawing.Size(46, 26);
             this.tbxSöktValör.TabIndex = 3;
+            this.tbxSöktValör.TextChanged += new System.EventHandler(this.tbxSöktValör_TextChanged);
             // 
             // tbxIndex
             // 
+            this.tbxIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxIndex.Enabled = false;
             this.tbxIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxIndex.Location = new System.Drawing.Point(108, 117);
             this.tbxIndex.Name = "tbxIndex";
-            this.tbxIndex.Size = new System.Drawing.Size(88, 26);
+            this.tbxIndex.Size = new System.Drawing.Size(46, 26);
             this.tbxIndex.TabIndex = 4;
             // 
             // btnSök
             // 
             this.btnSök.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSök.Enabled = false;
             this.btnSök.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSök.Location = new System.Drawing.Point(157, 270);
             this.btnSök.Name = "btnSök";
@@ -112,12 +117,24 @@
             this.btnBlanda.UseVisualStyleBackColor = true;
             this.btnBlanda.Click += new System.EventHandler(this.btnBlanda_Click);
             // 
+            // lblFeedback
+            // 
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblFeedback.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeedback.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblFeedback.Location = new System.Drawing.Point(160, 80);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(0, 19);
+            this.lblFeedback.TabIndex = 7;
+            // 
             // Sekvensiell_Sökning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(687, 320);
+            this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.btnBlanda);
             this.Controls.Add(this.btnSök);
             this.Controls.Add(this.tbxIndex);
@@ -143,6 +160,7 @@
         private System.Windows.Forms.TextBox tbxIndex;
         private System.Windows.Forms.Button btnSök;
         private System.Windows.Forms.Button btnBlanda;
+        private System.Windows.Forms.Label lblFeedback;
     }
 }
 
