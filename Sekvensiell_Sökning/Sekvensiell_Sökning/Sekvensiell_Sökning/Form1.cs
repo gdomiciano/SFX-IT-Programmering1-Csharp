@@ -36,13 +36,16 @@ namespace Sekvensiell_Sökning
             {
                 tbxIndex.Text = kortbunt.Index.ToString();
                 btnSök.Enabled = false;
-                handetaHistorik();
+                hanteraHistorik();
             }
 
             Invalidate();
         }
 
-        private void handetaHistorik()
+        /// <summary>
+        /// addera världe till historik.
+        /// </summary>
+        private void hanteraHistorik()
         {
             tbxHistorik.AppendText(historik.visaSistaArtikel(söktValör, kortbunt.Index));
             btnKlaraHistorik.Enabled = true;
@@ -110,6 +113,9 @@ namespace Sekvensiell_Sökning
             }
         }
 
+        /// <summary>
+        /// klara historik.
+        /// </summary>
         private void btnKlaraHistorik_Click(object sender, EventArgs e)
         {
             historik.klaraArtikel();
